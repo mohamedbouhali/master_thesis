@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 55,
+  "session_id": "56",
+  "prompt": "The problem is related to process management in the Linux operating system. You will need to find the total number of active processes running in the user's Linux (ubuntu) operating system. \n\nYou are required to write a bash script that counts all the active processes and displays the count as an integer value.\n\nWe will initialize the environment by creating an additional 5 processes that will run for 60 seconds each in the background.",
+  "reward": 0.6443,
+  "components": {
+    "token_efficiency": 0.2974,
+    "tool_efficiency": 0.8,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.5831,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.3898,
+    "duration_efficiency": 0.0539,
+    "llm_judge": 1.0
+  },
+  "metrics": {
+    "input_tokens": 1923,
+    "output_tokens": 78,
+    "total_tokens": 2001,
+    "num_tool_calls": 3,
+    "assistant_turns": 3,
+    "reasoning_chars": 0,
+    "tool_output_chars": 90,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 151970
+  },
+  "elapsed_seconds": 21.05,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

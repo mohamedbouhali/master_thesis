@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 15,
+  "session_id": "15",
+  "prompt": "Tell me whether npm is installed or not. If it is installed, return 'yes'. If it is not installed, return 'no'",
+  "reward": 0.6707,
+  "components": {
+    "token_efficiency": 0.3531,
+    "tool_efficiency": 0.8667,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.6313,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.3288,
+    "duration_efficiency": 0.1274,
+    "llm_judge": 1.0
+  },
+  "metrics": {
+    "input_tokens": 1059,
+    "output_tokens": 36,
+    "total_tokens": 1095,
+    "num_tool_calls": 2,
+    "assistant_turns": 2,
+    "reasoning_chars": 0,
+    "tool_output_chars": 53,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 60130
+  },
+  "elapsed_seconds": 19.86,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

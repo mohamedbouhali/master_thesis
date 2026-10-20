@@ -1,0 +1,357 @@
+{
+  "batch_index": 3,
+  "start_index": 30,
+  "end_index": 39,
+  "results": [
+    {
+      "status": "completed",
+      "dataset_index": 30,
+      "session_id": "29",
+      "prompt": "How many default paths are looked for when I execute an executable on this computer? (Only existing and valid directories)",
+      "reward": 0.6579,
+      "components": {
+        "token_efficiency": 0.3064,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.548,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5011,
+        "duration_efficiency": 0.1286,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1725,
+        "output_tokens": 91,
+        "total_tokens": 1816,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 132,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 59240
+      },
+      "elapsed_seconds": 0.63,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 31,
+      "session_id": "30",
+      "prompt": "How many default paths are looked for when I execute an executable on this computer? (Only existing and valid directories)",
+      "reward": 0.6588,
+      "components": {
+        "token_efficiency": 0.3064,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.548,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5011,
+        "duration_efficiency": 0.1461,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1725,
+        "output_tokens": 91,
+        "total_tokens": 1816,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 132,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 47550
+      },
+      "elapsed_seconds": 0.61,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 32,
+      "session_id": "34",
+      "prompt": "How many lines are there in /root/matrix.txt",
+      "reward": 0.6791,
+      "components": {
+        "token_efficiency": 0.3545,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6442,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3896,
+        "duration_efficiency": 0.1414,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1036,
+        "output_tokens": 42,
+        "total_tokens": 1078,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 46,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 50420
+      },
+      "elapsed_seconds": 0.53,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 33,
+      "session_id": "33",
+      "prompt": "How many existing directories are in $PATH?",
+      "reward": 0.706,
+      "components": {
+        "token_efficiency": 0.3511,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.6256,
+        "duration_efficiency": 0.1234,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1049,
+        "output_tokens": 70,
+        "total_tokens": 1119,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 63300
+      },
+      "elapsed_seconds": 0.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 34,
+      "session_id": "38",
+      "prompt": "I would like to implement the following function: entering the \"count\" command will counts the number of regular files in a directory and its subdirectories(recursively), and displays the total count. If there is a link or something, count it separately. For example, I can enter \"count /usr/local\" to get the number of regular files in /usr/local recursively. If there are 5 regular files in that, the output is \"5\".",
+      "reward": 0.7138,
+      "components": {
+        "token_efficiency": 0.331,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5772,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.8843,
+        "duration_efficiency": 0.0989,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1268,
+        "output_tokens": 123,
+        "total_tokens": 1391,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 96,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 86160
+      },
+      "elapsed_seconds": 0.56,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 35,
+      "session_id": "35",
+      "prompt": "Test if variable var is an integer? If so, tell me \"yes\", otherwise tell me \"no\". (Without quotes)",
+      "reward": 0.5251,
+      "components": {
+        "token_efficiency": 0.2587,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4946,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.832,
+        "duration_efficiency": 0.0548,
+        "llm_judge": 0.1
+      },
+      "metrics": {
+        "input_tokens": 2788,
+        "output_tokens": 253,
+        "total_tokens": 3041,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 236,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 150300
+      },
+      "elapsed_seconds": 0.64,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 36,
+      "session_id": "40",
+      "prompt": "How many hidden files are in /usr?",
+      "reward": 0.6911,
+      "components": {
+        "token_efficiency": 0.3545,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4634,
+        "duration_efficiency": 0.1319,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1029,
+        "output_tokens": 50,
+        "total_tokens": 1079,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 56840
+      },
+      "elapsed_seconds": 2.45,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 37,
+      "session_id": "36",
+      "prompt": "Test if variable var is an integer? If so, tell me \"yes\", otherwise tell me \"no\". (Without quotes)",
+      "reward": 0.5153,
+      "components": {
+        "token_efficiency": 0.2236,
+        "tool_efficiency": 0.6667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.456,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.9737,
+        "duration_efficiency": 0.0291,
+        "llm_judge": 0.1
+      },
+      "metrics": {
+        "input_tokens": 4014,
+        "output_tokens": 433,
+        "total_tokens": 4447,
+        "num_tool_calls": 5,
+        "assistant_turns": 5,
+        "reasoning_chars": 0,
+        "tool_output_chars": 359,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 207750
+      },
+      "elapsed_seconds": 49.93,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 38,
+      "session_id": "42",
+      "prompt": "How much disk space is being used by /usr and all of its contents? Tell me in human-readable format.",
+      "reward": 0.6899,
+      "components": {
+        "token_efficiency": 0.3532,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6714,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3748,
+        "duration_efficiency": 0.339,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1053,
+        "output_tokens": 41,
+        "total_tokens": 1094,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 34,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 4170
+      },
+      "elapsed_seconds": 33.72,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 39,
+      "session_id": "43",
+      "prompt": "How many empty files are there in /usr and all of its content?",
+      "reward": 0.6867,
+      "components": {
+        "token_efficiency": 0.3538,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6857,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4416,
+        "duration_efficiency": 0.1112,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1039,
+        "output_tokens": 48,
+        "total_tokens": 1087,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 29,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 73820
+      },
+      "elapsed_seconds": 27.65,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    }
+  ]
+}

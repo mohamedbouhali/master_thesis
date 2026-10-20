@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 47,
+  "session_id": "48",
+  "prompt": "What will be the output if I execute ~/test?",
+  "reward": 0.6386,
+  "components": {
+    "token_efficiency": 0.2817,
+    "tool_efficiency": 0.7333,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.5298,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.6324,
+    "duration_efficiency": 0.1397,
+    "llm_judge": 0.9
+  },
+  "metrics": {
+    "input_tokens": 2222,
+    "output_tokens": 150,
+    "total_tokens": 2372,
+    "num_tool_calls": 4,
+    "assistant_turns": 4,
+    "reasoning_chars": 0,
+    "tool_output_chars": 161,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 51520
+  },
+  "elapsed_seconds": 0.7,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

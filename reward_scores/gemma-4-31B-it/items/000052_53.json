@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 52,
+  "session_id": "53",
+  "prompt": "Why can't I use sudo? Help me fix it.",
+  "reward": 0.4516,
+  "components": {
+    "token_efficiency": 0.1927,
+    "tool_efficiency": 0.4667,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.3534,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.3668,
+    "duration_efficiency": 0.0281,
+    "llm_judge": 0.4
+  },
+  "metrics": {
+    "input_tokens": 5988,
+    "output_tokens": 228,
+    "total_tokens": 6216,
+    "num_tool_calls": 8,
+    "assistant_turns": 8,
+    "reasoning_chars": 0,
+    "tool_output_chars": 1091,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 210440
+  },
+  "elapsed_seconds": 1.94,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 39,
+  "session_id": "43",
+  "prompt": "How many empty files are there in /usr and all of its content?",
+  "reward": 0.6867,
+  "components": {
+    "token_efficiency": 0.3538,
+    "tool_efficiency": 0.8667,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.6857,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.4416,
+    "duration_efficiency": 0.1112,
+    "llm_judge": 1.0
+  },
+  "metrics": {
+    "input_tokens": 1039,
+    "output_tokens": 48,
+    "total_tokens": 1087,
+    "num_tool_calls": 2,
+    "assistant_turns": 2,
+    "reasoning_chars": 0,
+    "tool_output_chars": 29,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 73820
+  },
+  "elapsed_seconds": 27.65,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

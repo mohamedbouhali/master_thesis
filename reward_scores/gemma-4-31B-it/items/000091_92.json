@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 91,
+  "session_id": "92",
+  "prompt": "\"You are given a folder named 'files' in your current working directory containing several text files. You have to navigate to the 'files' folder and find the total sum of all the integers present across all the text files. Integers can be positive or negative and may be more than one per line. The integers are separated by whitespace or special characters. \"",
+  "reward": 0.628,
+  "components": {
+    "token_efficiency": 0.2646,
+    "tool_efficiency": 0.7333,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.4741,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.417,
+    "duration_efficiency": 0.2554,
+    "llm_judge": 1.0
+  },
+  "metrics": {
+    "input_tokens": 2735,
+    "output_tokens": 119,
+    "total_tokens": 2854,
+    "num_tool_calls": 4,
+    "assistant_turns": 4,
+    "reasoning_chars": 0,
+    "tool_output_chars": 295,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 11970
+  },
+  "elapsed_seconds": 29.17,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

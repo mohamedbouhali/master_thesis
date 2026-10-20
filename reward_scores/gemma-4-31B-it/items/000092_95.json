@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 92,
+  "session_id": "95",
+  "prompt": "'As a student, you are asked to find the total number of lines of code in all the \".c\" and \".h\" files in the \"test_directory\" (including its subdirectories). The question will test your ability to navigate the Linux file system, use basic commands to filter and manipulate the data. To complete the task, you should provide the total number of lines of code in the \"test_directory\" folder containing \".c\" and \".h\" files.'",
+  "reward": 0.6659,
+  "components": {
+    "token_efficiency": 0.3339,
+    "tool_efficiency": 0.8667,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.5023,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.4451,
+    "duration_efficiency": 0.1536,
+    "llm_judge": 1.0
+  },
+  "metrics": {
+    "input_tokens": 1288,
+    "output_tokens": 60,
+    "total_tokens": 1348,
+    "num_tool_calls": 2,
+    "assistant_turns": 2,
+    "reasoning_chars": 0,
+    "tool_output_chars": 217,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 43220
+  },
+  "elapsed_seconds": 23.14,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

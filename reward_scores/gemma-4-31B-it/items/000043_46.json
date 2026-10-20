@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 43,
+  "session_id": "46",
+  "prompt": "How many files in /usr (recursively) were modified in the last 24 hours?",
+  "reward": 0.6893,
+  "components": {
+    "token_efficiency": 0.3528,
+    "tool_efficiency": 0.8667,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.6954,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.4368,
+    "duration_efficiency": 0.1584,
+    "llm_judge": 1.0
+  },
+  "metrics": {
+    "input_tokens": 1051,
+    "output_tokens": 48,
+    "total_tokens": 1099,
+    "num_tool_calls": 2,
+    "assistant_turns": 2,
+    "reasoning_chars": 0,
+    "tool_output_chars": 26,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 40670
+  },
+  "elapsed_seconds": 16.07,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

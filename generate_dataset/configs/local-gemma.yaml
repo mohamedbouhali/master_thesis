@@ -1,0 +1,25 @@
+# generate_dataset/configs/local-gemma.yaml
+# -----------------------------------------
+# Agent config for a Gemma 4 model served locally via vLLM.
+# vLLM exposes an OpenAI-compatible endpoint — no API key required.
+#
+# Usage: referenced by assignment.yaml and by api_agents.yaml (via import).
+#
+# To switch models, change `model` in body and update the name in
+# api_agents.yaml + assignment.yaml to match.
+
+module: src.client.agents.HTTPAgent
+parameters:
+  url: http://localhost:8000/v1/chat/completions
+  headers:
+    Content-Type: application/json
+    Authorization: Bearer not-needed
+  body:
+    model: google/gemma-4-12B-it   # must match --model passed to vLLM
+    temperature: 0
+    max_tokens: 1024
+  prompter:
+    name: role_content_dict
+    args:
+      agent_role: assistant
+  return_format: "{response[choices][0][message][content]}"

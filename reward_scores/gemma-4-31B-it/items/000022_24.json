@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 22,
+  "session_id": "24",
+  "prompt": "If a regular file named \"workspace\" exists in /working (recursively)? If so, output \"yes\", otherwise output \"no\" (with out quotes).",
+  "reward": 0.6804,
+  "components": {
+    "token_efficiency": 0.3514,
+    "tool_efficiency": 0.8667,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.6826,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.3946,
+    "duration_efficiency": 0.0971,
+    "llm_judge": 1.0
+  },
+  "metrics": {
+    "input_tokens": 1071,
+    "output_tokens": 44,
+    "total_tokens": 1115,
+    "num_tool_calls": 2,
+    "assistant_turns": 2,
+    "reasoning_chars": 0,
+    "tool_output_chars": 30,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 88140
+  },
+  "elapsed_seconds": 22.01,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 35,
+  "session_id": "35",
+  "prompt": "Test if variable var is an integer? If so, tell me \"yes\", otherwise tell me \"no\". (Without quotes)",
+  "reward": 0.5251,
+  "components": {
+    "token_efficiency": 0.2587,
+    "tool_efficiency": 0.7333,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.4946,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.832,
+    "duration_efficiency": 0.0548,
+    "llm_judge": 0.1
+  },
+  "metrics": {
+    "input_tokens": 2788,
+    "output_tokens": 253,
+    "total_tokens": 3041,
+    "num_tool_calls": 4,
+    "assistant_turns": 4,
+    "reasoning_chars": 0,
+    "tool_output_chars": 236,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 150300
+  },
+  "elapsed_seconds": 0.64,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

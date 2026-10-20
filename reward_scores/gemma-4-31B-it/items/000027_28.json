@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 27,
+  "session_id": "28",
+  "prompt": "How many default paths are looked for when I execute an executable on this computer? (Regardless of whether the path exists or not.)",
+  "reward": 0.6852,
+  "components": {
+    "token_efficiency": 0.3523,
+    "tool_efficiency": 0.8667,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.6954,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.4163,
+    "duration_efficiency": 0.1197,
+    "llm_judge": 1.0
+  },
+  "metrics": {
+    "input_tokens": 1059,
+    "output_tokens": 46,
+    "total_tokens": 1105,
+    "num_tool_calls": 2,
+    "assistant_turns": 2,
+    "reasoning_chars": 0,
+    "tool_output_chars": 26,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 66290
+  },
+  "elapsed_seconds": 0.91,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

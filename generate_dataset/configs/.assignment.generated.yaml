@@ -1,0 +1,31 @@
+definition:
+  task:
+    overwrite:
+      module: src.client.TaskClient
+      parameters:
+        controller_address: http://localhost:5020/api
+    import: ../../configs/tasks/task_assembly.yaml
+  agent:
+    gemma-local:
+      import: ./local-gemma.yaml
+      parameters:
+        name: gemma-local
+        url: https://morpheus.cit.tum.de/api/v1/chat/completions
+        headers:
+          Content-Type: application/json
+          Authorization: Bearer sk-911e06f03cf2496ab1a0fab983b080a0
+        body:
+          model: google/gemma-4-31B-it
+          temperature: 0.0
+          max_tokens: 1024
+concurrency:
+  task:
+    os-std: 1
+  agent:
+    gemma-local: 1
+assignments:
+- agent:
+  - gemma-local
+  task:
+  - os-std
+output: /Users/m.bouhali/Desktop/Projects/master/master_thesis/outputs/traces/20261001_140813

@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 50,
+  "session_id": "49",
+  "prompt": "make /testfile readable to jack, bill and tom, but not george",
+  "reward": 0.4231,
+  "components": {
+    "token_efficiency": 0.1739,
+    "tool_efficiency": 0.4667,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.282,
+    "redundancy_penalty": 0.875,
+    "output_density": 0.3281,
+    "duration_efficiency": 0.0227,
+    "llm_judge": 0.4
+  },
+  "metrics": {
+    "input_tokens": 7370,
+    "output_tokens": 250,
+    "total_tokens": 7620,
+    "num_tool_calls": 8,
+    "assistant_turns": 8,
+    "reasoning_chars": 0,
+    "tool_output_chars": 2363,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.125,
+    "duration_ms": 225290
+  },
+  "elapsed_seconds": 0.51,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

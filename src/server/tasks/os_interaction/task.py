@@ -79,7 +79,7 @@ class Container:
         # ... ']' and any digits, a semicolon, any characters except BEL (0x07), and ending with BEL
         output = re.sub(b'\x1b][0-9]*;[^\x07]*\x07', b'', output)
         # ... '[?2004' and either 'h' or 'l'
-        output = re.sub(b'\x1b\[\?2004[hl]', b'', output)
+        output = re.sub(rb'\x1b\[\?2004[hl]', b'', output)
 
         # Remove BEL characters (0x07)
         output = re.sub(b'\x07', b'', output)

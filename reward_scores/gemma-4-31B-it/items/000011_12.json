@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 11,
+  "session_id": "12",
+  "prompt": "Tell me the number of CPUs.",
+  "reward": 0.6784,
+  "components": {
+    "token_efficiency": 0.3574,
+    "tool_efficiency": 0.8667,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.6954,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.3349,
+    "duration_efficiency": 0.1203,
+    "llm_judge": 1.0
+  },
+  "metrics": {
+    "input_tokens": 1010,
+    "output_tokens": 35,
+    "total_tokens": 1045,
+    "num_tool_calls": 2,
+    "assistant_turns": 2,
+    "reasoning_chars": 0,
+    "tool_output_chars": 26,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 65840
+  },
+  "elapsed_seconds": 21.5,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

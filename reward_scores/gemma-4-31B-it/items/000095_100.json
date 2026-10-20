@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 95,
+  "session_id": "100",
+  "prompt": "As a student, you have been given the task of finding the total number of lines, within a specified set of text files, that contain a specific word. You will write a script using Linux (Ubuntu) shell commands to achieve this task. The specific word and the text files will be provided through an initialization script.",
+  "reward": 0.6282,
+  "components": {
+    "token_efficiency": 0.2734,
+    "tool_efficiency": 0.7333,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.5473,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.3892,
+    "duration_efficiency": 0.1231,
+    "llm_judge": 1.0
+  },
+  "metrics": {
+    "input_tokens": 2494,
+    "output_tokens": 101,
+    "total_tokens": 2595,
+    "num_tool_calls": 4,
+    "assistant_turns": 4,
+    "reasoning_chars": 0,
+    "tool_output_chars": 133,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 63520
+  },
+  "elapsed_seconds": 14.33,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

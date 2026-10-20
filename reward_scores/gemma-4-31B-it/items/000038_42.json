@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 38,
+  "session_id": "42",
+  "prompt": "How much disk space is being used by /usr and all of its contents? Tell me in human-readable format.",
+  "reward": 0.6899,
+  "components": {
+    "token_efficiency": 0.3532,
+    "tool_efficiency": 0.8667,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.6714,
+    "redundancy_penalty": 1.0,
+    "output_density": 0.3748,
+    "duration_efficiency": 0.339,
+    "llm_judge": 1.0
+  },
+  "metrics": {
+    "input_tokens": 1053,
+    "output_tokens": 41,
+    "total_tokens": 1094,
+    "num_tool_calls": 2,
+    "assistant_turns": 2,
+    "reasoning_chars": 0,
+    "tool_output_chars": 34,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 4170
+  },
+  "elapsed_seconds": 33.72,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

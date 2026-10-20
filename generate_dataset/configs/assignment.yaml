@@ -1,0 +1,40 @@
+# generate_dataset/configs/assignment.yaml
+# ----------------------------------------
+# Assignment config for the trace-generation run.
+# The agent name must match config.AGENT_NAME (default: "gemma-local").
+#
+# Do NOT edit the URL / model / api_key here — those are injected at runtime
+# by run.py from config.py (or CLI overrides).  This file only provides the
+# structural skeleton.
+
+definition:
+  task:
+    overwrite:
+      module: src.client.TaskClient
+      parameters:
+        # FC/AgentRL controller serves clients AND workers on :5020
+        # (the old :5000 in README/docs is AgentBench v0.2 — stale here)
+        controller_address: "http://localhost:5020/api"
+    # path is relative to this file's dir (generate_dataset/configs/):
+    # ../../configs/tasks → <repo>/configs/tasks
+    import: ../../configs/tasks/task_assembly.yaml
+  agent:
+    gemma-local:                         # must match config.AGENT_NAME
+      import: "./local-gemma.yaml"
+      parameters:
+        name: "gemma-local"
+        # url, headers, body are overridden at runtime by run.py
+
+concurrency:
+  task:
+    os-std: 4
+  agent:
+    gemma-local: 4
+
+assignments:
+  - agent:
+      - gemma-local
+    task:
+      - os-std
+
+output: "outputs/traces"

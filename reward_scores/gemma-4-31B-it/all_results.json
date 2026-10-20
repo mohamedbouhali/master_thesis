@@ -1,0 +1,4992 @@
+{
+  "summary": {
+    "status": "completed",
+    "dataset_path": "/Users/m.bouhali/Desktop/Projects/master/master_thesis/reward_scores/gemma-4-31B-it/input.json",
+    "total_items": 142,
+    "completed_items": 142,
+    "newly_scored_this_run": 142,
+    "failed_this_run": 0,
+    "batch_size": 10,
+    "total_elapsed_seconds": 2033.98,
+    "average_new_item_seconds": 14.32,
+    "judge": {
+      "enabled": true,
+      "model": "google/gemma-4-31B-it",
+      "base_url": "https://morpheus.cit.tum.de/api/v1"
+    },
+    "started_at": "2026-10-14T22:25:13.360868+00:00",
+    "finished_at": "2026-10-14T22:59:07.340397+00:00"
+  },
+  "results": [
+    {
+      "status": "completed",
+      "dataset_index": 0,
+      "session_id": "1",
+      "prompt": "Stock logs are shown in /usr/stock.log. The last two columns are stock index and count. Tell me how many times Bob bought a stock.",
+      "reward": 0.6357,
+      "components": {
+        "token_efficiency": 0.296,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4704,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3986,
+        "duration_efficiency": 0.0958,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1951,
+        "output_tokens": 81,
+        "total_tokens": 2032,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 307,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 89590
+      },
+      "elapsed_seconds": 14.23,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 1,
+      "session_id": "0",
+      "prompt": "Stock logs are shown in /usr/stock.log. The last two columns are stock index and count. Tell me how many times Alice sold a stock.",
+      "reward": 0.6434,
+      "components": {
+        "token_efficiency": 0.3023,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5136,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4164,
+        "duration_efficiency": 0.0953,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1818,
+        "output_tokens": 79,
+        "total_tokens": 1897,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 192,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 90200
+      },
+      "elapsed_seconds": 24.07,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 2,
+      "session_id": "2",
+      "prompt": "Stock logs are shown in /usr/stock.log. The last two columns are stock index and count. Please count the total number of stocks that Alice bought, and tell me the number.",
+      "reward": 0.5898,
+      "components": {
+        "token_efficiency": 0.2677,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4578,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4239,
+        "duration_efficiency": 0.0935,
+        "llm_judge": 0.8
+      },
+      "metrics": {
+        "input_tokens": 2643,
+        "output_tokens": 117,
+        "total_tokens": 2760,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 352,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 92290
+      },
+      "elapsed_seconds": 21.5,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 3,
+      "session_id": "3",
+      "prompt": "Stock logs are shown in /usr/stock.log. The last two columns are stock index and count. Please determine the number of types of stocks Bob sold. And tell me the answer.",
+      "reward": 0.5441,
+      "components": {
+        "token_efficiency": 0.2214,
+        "tool_efficiency": 0.6667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3922,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4018,
+        "duration_efficiency": 0.0871,
+        "llm_judge": 0.7
+      },
+      "metrics": {
+        "input_tokens": 4372,
+        "output_tokens": 183,
+        "total_tokens": 4555,
+        "num_tool_calls": 5,
+        "assistant_turns": 5,
+        "reasoning_chars": 0,
+        "tool_output_chars": 717,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 100050
+      },
+      "elapsed_seconds": 6.43,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 4,
+      "session_id": "7",
+      "prompt": "Tell me how many files can be executed in PATH.",
+      "reward": 0.7057,
+      "components": {
+        "token_efficiency": 0.3504,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6888,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.6389,
+        "duration_efficiency": 0.1058,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1055,
+        "output_tokens": 72,
+        "total_tokens": 1127,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 28,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 78960
+      },
+      "elapsed_seconds": 0.66,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 5,
+      "session_id": "5",
+      "prompt": "Stock logs are shown in /usr/stock.log. The last two columns are stock index and count. Identify the most active traders (buyers/sellers) based on the count of their transactions.",
+      "reward": 0.634,
+      "components": {
+        "token_efficiency": 0.267,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4966,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5286,
+        "duration_efficiency": 0.0949,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2634,
+        "output_tokens": 147,
+        "total_tokens": 2781,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 231,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 90690
+      },
+      "elapsed_seconds": 0.47,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 6,
+      "session_id": "6",
+      "prompt": "Stock logs are shown in /usr/stock.log. The last two columns are stock index and count. Find the stock index with the highest count of transactions (combined purchases and sales).",
+      "reward": 0.5792,
+      "components": {
+        "token_efficiency": 0.2388,
+        "tool_efficiency": 0.6667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4527,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.522,
+        "duration_efficiency": 0.0415,
+        "llm_judge": 0.8
+      },
+      "metrics": {
+        "input_tokens": 3577,
+        "output_tokens": 197,
+        "total_tokens": 3774,
+        "num_tool_calls": 5,
+        "assistant_turns": 5,
+        "reasoning_chars": 0,
+        "tool_output_chars": 372,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 177840
+      },
+      "elapsed_seconds": 0.45,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 7,
+      "session_id": "8",
+      "prompt": "Tell me how many files can be executed directly no matter where my work dir is.",
+      "reward": 0.7041,
+      "components": {
+        "token_efficiency": 0.3495,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6888,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.6321,
+        "duration_efficiency": 0.0932,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1067,
+        "output_tokens": 72,
+        "total_tokens": 1139,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 28,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 92600
+      },
+      "elapsed_seconds": 0.39,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 8,
+      "session_id": "9",
+      "prompt": "I remember I had a directory for executables, and there was an executable echo-love in there. But I forgot the path of this directory. Can you tell me the full path of this directory?",
+      "reward": 0.6151,
+      "components": {
+        "token_efficiency": 0.2148,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3089,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.8214,
+        "duration_efficiency": 0.0678,
+        "llm_judge": 0.9
+      },
+      "metrics": {
+        "input_tokens": 4492,
+        "output_tokens": 402,
+        "total_tokens": 4894,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 1766,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 127650
+      },
+      "elapsed_seconds": 2.04,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 9,
+      "session_id": "10",
+      "prompt": "I remember I had a directory for executables, and there was an executable echo-love in there. But I forgot the path of this directory. Can you tell me the full path of this executable?",
+      "reward": 0.5954,
+      "components": {
+        "token_efficiency": 0.2493,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3793,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4217,
+        "duration_efficiency": 0.1583,
+        "llm_judge": 0.9
+      },
+      "metrics": {
+        "input_tokens": 3225,
+        "output_tokens": 142,
+        "total_tokens": 3367,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 824,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 40750
+      },
+      "elapsed_seconds": 50.14,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 10,
+      "session_id": "4",
+      "prompt": "Stock logs are shown in /usr/stock.log. The last two columns are stock index and count. Please count the number of types of stocks that Bob sold but never bought. And tell me the answer.",
+      "reward": 0.4577,
+      "components": {
+        "token_efficiency": 0.149,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3806,
+        "redundancy_penalty": 0.875,
+        "output_density": 0.7956,
+        "duration_efficiency": 0.0059,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 9174,
+        "output_tokens": 793,
+        "total_tokens": 9967,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 813,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.125,
+        "duration_ms": 278500
+      },
+      "elapsed_seconds": 21.09,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 11,
+      "session_id": "12",
+      "prompt": "Tell me the number of CPUs.",
+      "reward": 0.6784,
+      "components": {
+        "token_efficiency": 0.3574,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3349,
+        "duration_efficiency": 0.1203,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1010,
+        "output_tokens": 35,
+        "total_tokens": 1045,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 65840
+      },
+      "elapsed_seconds": 21.5,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 12,
+      "session_id": "13",
+      "prompt": "How many groups are in this UNIX system?",
+      "reward": 0.683,
+      "components": {
+        "token_efficiency": 0.356,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.692,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3864,
+        "duration_efficiency": 0.1231,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1020,
+        "output_tokens": 41,
+        "total_tokens": 1061,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 27,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 63490
+      },
+      "elapsed_seconds": 14.54,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 13,
+      "session_id": "11",
+      "prompt": "I remember I had a directory for executables, and there was an executable echo-love in there. But I forgot the path of this directory. Can you add the folder into PATH so that I can call it in the future?",
+      "reward": 0.5327,
+      "components": {
+        "token_efficiency": 0.2009,
+        "tool_efficiency": 0.6,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3729,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4642,
+        "duration_efficiency": 0.0761,
+        "llm_judge": 0.7
+      },
+      "metrics": {
+        "input_tokens": 5423,
+        "output_tokens": 264,
+        "total_tokens": 5687,
+        "num_tool_calls": 6,
+        "assistant_turns": 6,
+        "reasoning_chars": 0,
+        "tool_output_chars": 884,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 114860
+      },
+      "elapsed_seconds": 15.53,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 14,
+      "session_id": "14",
+      "prompt": "Recursively Find how many files have the extension .tep",
+      "reward": 0.6888,
+      "components": {
+        "token_efficiency": 0.3543,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.444,
+        "duration_efficiency": 0.1266,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1033,
+        "output_tokens": 48,
+        "total_tokens": 1081,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 60800
+      },
+      "elapsed_seconds": 24.41,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 15,
+      "session_id": "15",
+      "prompt": "Tell me whether npm is installed or not. If it is installed, return 'yes'. If it is not installed, return 'no'",
+      "reward": 0.6707,
+      "components": {
+        "token_efficiency": 0.3531,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6313,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3288,
+        "duration_efficiency": 0.1274,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1059,
+        "output_tokens": 36,
+        "total_tokens": 1095,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 53,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 60130
+      },
+      "elapsed_seconds": 19.86,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 16,
+      "session_id": "16",
+      "prompt": "Tell me whether npm is installed or not. If it is installed, return 'yes'. If it is not installed, return 'no'",
+      "reward": 0.6758,
+      "components": {
+        "token_efficiency": 0.3533,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6826,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3294,
+        "duration_efficiency": 0.1267,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1057,
+        "output_tokens": 36,
+        "total_tokens": 1093,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 30,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 60700
+      },
+      "elapsed_seconds": 0.43,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 17,
+      "session_id": "17",
+      "prompt": "Tell me the max number of threads in Linux.",
+      "reward": 0.5971,
+      "components": {
+        "token_efficiency": 0.3546,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6826,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4457,
+        "duration_efficiency": 0.1118,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 1029,
+        "output_tokens": 48,
+        "total_tokens": 1077,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 30,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 73250
+      },
+      "elapsed_seconds": 0.41,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 18,
+      "session_id": "20",
+      "prompt": "Get the name of most recent file in /usr. (not recursively)",
+      "reward": 0.686,
+      "components": {
+        "token_efficiency": 0.3539,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6797,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4332,
+        "duration_efficiency": 0.1239,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1038,
+        "output_tokens": 47,
+        "total_tokens": 1085,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 31,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 62870
+      },
+      "elapsed_seconds": 0.58,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 19,
+      "session_id": "23",
+      "prompt": "If a regular file named \"workspace\" exists in /working (recursively)? If so, output \"yes\", otherwise output \"no\" (with out quotes).",
+      "reward": 0.6955,
+      "components": {
+        "token_efficiency": 0.3514,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6826,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3946,
+        "duration_efficiency": 0.3989,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1071,
+        "output_tokens": 44,
+        "total_tokens": 1115,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 30,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 1960
+      },
+      "elapsed_seconds": 4.71,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 20,
+      "session_id": "22",
+      "prompt": "Move the file MyPersonalComputer.config to current directory. And tell me the path of the file before copying.",
+      "reward": 0.6674,
+      "components": {
+        "token_efficiency": 0.3073,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5647,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5729,
+        "duration_efficiency": 0.1356,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1695,
+        "output_tokens": 103,
+        "total_tokens": 1798,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 110,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 54230
+      },
+      "elapsed_seconds": 45.36,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 21,
+      "session_id": "21",
+      "prompt": "How many hidden files, which do not contain the character u, are in /usr? (not recursively)",
+      "reward": 0.5371,
+      "components": {
+        "token_efficiency": 0.2517,
+        "tool_efficiency": 0.6667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5523,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5513,
+        "duration_efficiency": 0.0761,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 3102,
+        "output_tokens": 181,
+        "total_tokens": 3283,
+        "num_tool_calls": 5,
+        "assistant_turns": 5,
+        "reasoning_chars": 0,
+        "tool_output_chars": 126,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 114900
+      },
+      "elapsed_seconds": 32.15,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 22,
+      "session_id": "24",
+      "prompt": "If a regular file named \"workspace\" exists in /working (recursively)? If so, output \"yes\", otherwise output \"no\" (with out quotes).",
+      "reward": 0.6804,
+      "components": {
+        "token_efficiency": 0.3514,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6826,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3946,
+        "duration_efficiency": 0.0971,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1071,
+        "output_tokens": 44,
+        "total_tokens": 1115,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 30,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 88140
+      },
+      "elapsed_seconds": 22.01,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 23,
+      "session_id": "25",
+      "prompt": "If a regular file named \"workspace\" exists in /working (recursively)? If so, output \"yes\", otherwise output \"no\" (with out quotes).",
+      "reward": 0.6768,
+      "components": {
+        "token_efficiency": 0.3508,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6442,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3922,
+        "duration_efficiency": 0.1095,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1078,
+        "output_tokens": 44,
+        "total_tokens": 1122,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 46,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 75420
+      },
+      "elapsed_seconds": 33.59,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 24,
+      "session_id": "26",
+      "prompt": "If a regular file named \"workspace\" exists in /working (recursively)? If so, output \"yes\", otherwise output \"no\" (with out quotes).",
+      "reward": 0.6777,
+      "components": {
+        "token_efficiency": 0.351,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6503,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3929,
+        "duration_efficiency": 0.113,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1076,
+        "output_tokens": 44,
+        "total_tokens": 1120,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 43,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 72150
+      },
+      "elapsed_seconds": 27.1,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 25,
+      "session_id": "18",
+      "prompt": "execute ~/test and get the output.",
+      "reward": 0.4151,
+      "components": {
+        "token_efficiency": 0.2037,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4488,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3281,
+        "duration_efficiency": 0.0288,
+        "llm_judge": 0.1
+      },
+      "metrics": {
+        "input_tokens": 5335,
+        "output_tokens": 181,
+        "total_tokens": 5516,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 388,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 208620
+      },
+      "elapsed_seconds": 26.34,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 26,
+      "session_id": "27",
+      "prompt": "What's the full path of a file \"TOOLS\"?",
+      "reward": 0.6867,
+      "components": {
+        "token_efficiency": 0.3541,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6688,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4524,
+        "duration_efficiency": 0.1216,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1034,
+        "output_tokens": 49,
+        "total_tokens": 1083,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 35,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 64700
+      },
+      "elapsed_seconds": 24.06,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 27,
+      "session_id": "28",
+      "prompt": "How many default paths are looked for when I execute an executable on this computer? (Regardless of whether the path exists or not.)",
+      "reward": 0.6852,
+      "components": {
+        "token_efficiency": 0.3523,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4163,
+        "duration_efficiency": 0.1197,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1059,
+        "output_tokens": 46,
+        "total_tokens": 1105,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 66290
+      },
+      "elapsed_seconds": 0.91,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 28,
+      "session_id": "31",
+      "prompt": "How many paths are in $PATH? (Regardless of whether the path exists or not.)",
+      "reward": 0.6891,
+      "components": {
+        "token_efficiency": 0.3536,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4224,
+        "duration_efficiency": 0.1794,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1043,
+        "output_tokens": 46,
+        "total_tokens": 1089,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 31220
+      },
+      "elapsed_seconds": 0.71,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 29,
+      "session_id": "32",
+      "prompt": "How many existing directories are in $PATH?",
+      "reward": 0.7092,
+      "components": {
+        "token_efficiency": 0.3511,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.6256,
+        "duration_efficiency": 0.1865,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1049,
+        "output_tokens": 70,
+        "total_tokens": 1119,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 28540
+      },
+      "elapsed_seconds": 0.6,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 30,
+      "session_id": "29",
+      "prompt": "How many default paths are looked for when I execute an executable on this computer? (Only existing and valid directories)",
+      "reward": 0.6579,
+      "components": {
+        "token_efficiency": 0.3064,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.548,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5011,
+        "duration_efficiency": 0.1286,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1725,
+        "output_tokens": 91,
+        "total_tokens": 1816,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 132,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 59240
+      },
+      "elapsed_seconds": 0.63,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 31,
+      "session_id": "30",
+      "prompt": "How many default paths are looked for when I execute an executable on this computer? (Only existing and valid directories)",
+      "reward": 0.6588,
+      "components": {
+        "token_efficiency": 0.3064,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.548,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5011,
+        "duration_efficiency": 0.1461,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1725,
+        "output_tokens": 91,
+        "total_tokens": 1816,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 132,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 47550
+      },
+      "elapsed_seconds": 0.61,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 32,
+      "session_id": "34",
+      "prompt": "How many lines are there in /root/matrix.txt",
+      "reward": 0.6791,
+      "components": {
+        "token_efficiency": 0.3545,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6442,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3896,
+        "duration_efficiency": 0.1414,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1036,
+        "output_tokens": 42,
+        "total_tokens": 1078,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 46,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 50420
+      },
+      "elapsed_seconds": 0.53,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 33,
+      "session_id": "33",
+      "prompt": "How many existing directories are in $PATH?",
+      "reward": 0.706,
+      "components": {
+        "token_efficiency": 0.3511,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.6256,
+        "duration_efficiency": 0.1234,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1049,
+        "output_tokens": 70,
+        "total_tokens": 1119,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 63300
+      },
+      "elapsed_seconds": 0.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 34,
+      "session_id": "38",
+      "prompt": "I would like to implement the following function: entering the \"count\" command will counts the number of regular files in a directory and its subdirectories(recursively), and displays the total count. If there is a link or something, count it separately. For example, I can enter \"count /usr/local\" to get the number of regular files in /usr/local recursively. If there are 5 regular files in that, the output is \"5\".",
+      "reward": 0.7138,
+      "components": {
+        "token_efficiency": 0.331,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5772,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.8843,
+        "duration_efficiency": 0.0989,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1268,
+        "output_tokens": 123,
+        "total_tokens": 1391,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 96,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 86160
+      },
+      "elapsed_seconds": 0.56,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 35,
+      "session_id": "35",
+      "prompt": "Test if variable var is an integer? If so, tell me \"yes\", otherwise tell me \"no\". (Without quotes)",
+      "reward": 0.5251,
+      "components": {
+        "token_efficiency": 0.2587,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4946,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.832,
+        "duration_efficiency": 0.0548,
+        "llm_judge": 0.1
+      },
+      "metrics": {
+        "input_tokens": 2788,
+        "output_tokens": 253,
+        "total_tokens": 3041,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 236,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 150300
+      },
+      "elapsed_seconds": 0.64,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 36,
+      "session_id": "40",
+      "prompt": "How many hidden files are in /usr?",
+      "reward": 0.6911,
+      "components": {
+        "token_efficiency": 0.3545,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4634,
+        "duration_efficiency": 0.1319,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1029,
+        "output_tokens": 50,
+        "total_tokens": 1079,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 56840
+      },
+      "elapsed_seconds": 2.45,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 37,
+      "session_id": "36",
+      "prompt": "Test if variable var is an integer? If so, tell me \"yes\", otherwise tell me \"no\". (Without quotes)",
+      "reward": 0.5153,
+      "components": {
+        "token_efficiency": 0.2236,
+        "tool_efficiency": 0.6667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.456,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.9737,
+        "duration_efficiency": 0.0291,
+        "llm_judge": 0.1
+      },
+      "metrics": {
+        "input_tokens": 4014,
+        "output_tokens": 433,
+        "total_tokens": 4447,
+        "num_tool_calls": 5,
+        "assistant_turns": 5,
+        "reasoning_chars": 0,
+        "tool_output_chars": 359,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 207750
+      },
+      "elapsed_seconds": 49.93,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 38,
+      "session_id": "42",
+      "prompt": "How much disk space is being used by /usr and all of its contents? Tell me in human-readable format.",
+      "reward": 0.6899,
+      "components": {
+        "token_efficiency": 0.3532,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6714,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3748,
+        "duration_efficiency": 0.339,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1053,
+        "output_tokens": 41,
+        "total_tokens": 1094,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 34,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 4170
+      },
+      "elapsed_seconds": 33.72,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 39,
+      "session_id": "43",
+      "prompt": "How many empty files are there in /usr and all of its content?",
+      "reward": 0.6867,
+      "components": {
+        "token_efficiency": 0.3538,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6857,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4416,
+        "duration_efficiency": 0.1112,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1039,
+        "output_tokens": 48,
+        "total_tokens": 1087,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 29,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 73820
+      },
+      "elapsed_seconds": 27.65,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 40,
+      "session_id": "41",
+      "prompt": "How many files whose name starts with letter exist in /usr?",
+      "reward": 0.54,
+      "components": {
+        "token_efficiency": 0.2536,
+        "tool_efficiency": 0.6667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5631,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5538,
+        "duration_efficiency": 0.0983,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 3036,
+        "output_tokens": 178,
+        "total_tokens": 3214,
+        "num_tool_calls": 5,
+        "assistant_turns": 5,
+        "reasoning_chars": 0,
+        "tool_output_chars": 112,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 86850
+      },
+      "elapsed_seconds": 24.47,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 41,
+      "session_id": "45",
+      "prompt": "How many directories (recursively) are in the /usr directory?",
+      "reward": 0.6846,
+      "components": {
+        "token_efficiency": 0.3541,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6857,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4247,
+        "duration_efficiency": 0.1005,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1037,
+        "output_tokens": 46,
+        "total_tokens": 1083,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 29,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 84480
+      },
+      "elapsed_seconds": 21.3,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 42,
+      "session_id": "37",
+      "prompt": "I would like to implement the following function: entering the \"calc\" command will enable the calculation of an expression. The expression can include addition, subtraction, multiplication, division, and parentheses. If the absolute error between the calculated answer and the expected answer is less than 1e-5, it will be considered correct. For example, I can calculate the result by entering \"calc 6 * (9 / 3) + 7\", and the output will be 25.",
+      "reward": 0.4612,
+      "components": {
+        "token_efficiency": 0.1396,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3702,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.7508,
+        "duration_efficiency": -0.0151,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 10212,
+        "output_tokens": 829,
+        "total_tokens": 11041,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 910,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 362980
+      },
+      "elapsed_seconds": 20.17,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 43,
+      "session_id": "46",
+      "prompt": "How many files in /usr (recursively) were modified in the last 24 hours?",
+      "reward": 0.6893,
+      "components": {
+        "token_efficiency": 0.3528,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4368,
+        "duration_efficiency": 0.1584,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1051,
+        "output_tokens": 48,
+        "total_tokens": 1099,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 40670
+      },
+      "elapsed_seconds": 16.07,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 44,
+      "session_id": "47",
+      "prompt": "execute ~/test and get the output",
+      "reward": 0.6224,
+      "components": {
+        "token_efficiency": 0.3138,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5744,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4716,
+        "duration_efficiency": 0.2865,
+        "llm_judge": 0.7
+      },
+      "metrics": {
+        "input_tokens": 1596,
+        "output_tokens": 79,
+        "total_tokens": 1675,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 99,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 8090
+      },
+      "elapsed_seconds": 6.35,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 45,
+      "session_id": "44",
+      "prompt": "How many directories are in the root dir (excluding hidden directories)?",
+      "reward": 0.479,
+      "components": {
+        "token_efficiency": 0.2348,
+        "tool_efficiency": 0.6,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.517,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4543,
+        "duration_efficiency": 0.0631,
+        "llm_judge": 0.2
+      },
+      "metrics": {
+        "input_tokens": 3761,
+        "output_tokens": 179,
+        "total_tokens": 3940,
+        "num_tool_calls": 6,
+        "assistant_turns": 6,
+        "reasoning_chars": 0,
+        "tool_output_chars": 185,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 135390
+      },
+      "elapsed_seconds": 0.45,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 46,
+      "session_id": "39",
+      "prompt": "I would like to implement a command line tool called \"date-format\" that can format a given date string based on the provided format string. For example, if I enter command date-format 2023-5-1 '%Y/%m/%d', the output will be 2023/05/01.",
+      "reward": 0.483,
+      "components": {
+        "token_efficiency": 0.1237,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3076,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.9136,
+        "duration_efficiency": -0.0005,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 11915,
+        "output_tokens": 1198,
+        "total_tokens": 13113,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 1792,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 301760
+      },
+      "elapsed_seconds": 0.48,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 47,
+      "session_id": "48",
+      "prompt": "What will be the output if I execute ~/test?",
+      "reward": 0.6386,
+      "components": {
+        "token_efficiency": 0.2817,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5298,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.6324,
+        "duration_efficiency": 0.1397,
+        "llm_judge": 0.9
+      },
+      "metrics": {
+        "input_tokens": 2222,
+        "output_tokens": 150,
+        "total_tokens": 2372,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 161,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 51520
+      },
+      "elapsed_seconds": 0.7,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 48,
+      "session_id": "51",
+      "prompt": "set all files in ~/videos to be 660, and all directories(include ~/videos) to be 750",
+      "reward": 0.7245,
+      "components": {
+        "token_efficiency": 0.3466,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6826,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.834,
+        "duration_efficiency": 0.123,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1077,
+        "output_tokens": 98,
+        "total_tokens": 1175,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 30,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 63560
+      },
+      "elapsed_seconds": 0.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 49,
+      "session_id": "50",
+      "prompt": "There's a vulnerability in the system (Hint: related to SUID). Find it and fix it.",
+      "reward": 0.5892,
+      "components": {
+        "token_efficiency": 0.2428,
+        "tool_efficiency": 0.6667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.453,
+        "redundancy_penalty": 0.8,
+        "output_density": 0.5202,
+        "duration_efficiency": 0.0236,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 3426,
+        "output_tokens": 188,
+        "total_tokens": 3614,
+        "num_tool_calls": 5,
+        "assistant_turns": 5,
+        "reasoning_chars": 0,
+        "tool_output_chars": 371,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.19999999999999996,
+        "duration_ms": 222770
+      },
+      "elapsed_seconds": 0.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 50,
+      "session_id": "49",
+      "prompt": "make /testfile readable to jack, bill and tom, but not george",
+      "reward": 0.4231,
+      "components": {
+        "token_efficiency": 0.1739,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.282,
+        "redundancy_penalty": 0.875,
+        "output_density": 0.3281,
+        "duration_efficiency": 0.0227,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 7370,
+        "output_tokens": 250,
+        "total_tokens": 7620,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 2363,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.125,
+        "duration_ms": 225290
+      },
+      "elapsed_seconds": 0.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 51,
+      "session_id": "52",
+      "prompt": "ahh! Why can't I use sudo??? Is it because the WiFi I'm using? fix it!!!",
+      "reward": 0.4397,
+      "components": {
+        "token_efficiency": 0.1871,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3373,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.2711,
+        "duration_efficiency": 0.0423,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 6424,
+        "output_tokens": 179,
+        "total_tokens": 6603,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 1299,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 175990
+      },
+      "elapsed_seconds": 0.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 52,
+      "session_id": "53",
+      "prompt": "Why can't I use sudo? Help me fix it.",
+      "reward": 0.4516,
+      "components": {
+        "token_efficiency": 0.1927,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3534,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3668,
+        "duration_efficiency": 0.0281,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 5988,
+        "output_tokens": 228,
+        "total_tokens": 6216,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 1091,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 210440
+      },
+      "elapsed_seconds": 1.94,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 53,
+      "session_id": "54",
+      "prompt": "Suppose you have a directory called /data that contains sensitive files that should only be accessible to members of the group \"dataaccess\". Ensure that new files and directories created in this directory inherit the group ownership, and that users can only delete files and directories that they own",
+      "reward": 0.7347,
+      "components": {
+        "token_efficiency": 0.3277,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6826,
+        "redundancy_penalty": 1.0,
+        "output_density": 1.0,
+        "duration_efficiency": 0.09,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1220,
+        "output_tokens": 222,
+        "total_tokens": 1442,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 30,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 96440
+      },
+      "elapsed_seconds": 38.7,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 54,
+      "session_id": "57",
+      "prompt": "In this problem, your task is to find the total count of processes that are currently running on the student's Linux (Ubuntu) operating system having 'bash' in their command name or path. The answer must be an integer.",
+      "reward": 0.6832,
+      "components": {
+        "token_efficiency": 0.3486,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4091,
+        "duration_efficiency": 0.1124,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1102,
+        "output_tokens": 47,
+        "total_tokens": 1149,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 72670
+      },
+      "elapsed_seconds": 18.02,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 55,
+      "session_id": "56",
+      "prompt": "The problem is related to process management in the Linux operating system. You will need to find the total number of active processes running in the user's Linux (ubuntu) operating system. \n\nYou are required to write a bash script that counts all the active processes and displays the count as an integer value.\n\nWe will initialize the environment by creating an additional 5 processes that will run for 60 seconds each in the background.",
+      "reward": 0.6443,
+      "components": {
+        "token_efficiency": 0.2974,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5831,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3898,
+        "duration_efficiency": 0.0539,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1923,
+        "output_tokens": 78,
+        "total_tokens": 2001,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 90,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 151970
+      },
+      "elapsed_seconds": 21.05,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 56,
+      "session_id": "55",
+      "prompt": "Why can't I use sudo?? fix it.",
+      "reward": 0.5133,
+      "components": {
+        "token_efficiency": 0.2122,
+        "tool_efficiency": 0.6,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3059,
+        "redundancy_penalty": 0.8333,
+        "output_density": 0.3417,
+        "duration_efficiency": 0.0435,
+        "llm_judge": 0.8
+      },
+      "metrics": {
+        "input_tokens": 4861,
+        "output_tokens": 172,
+        "total_tokens": 5033,
+        "num_tool_calls": 6,
+        "assistant_turns": 6,
+        "reasoning_chars": 0,
+        "tool_output_chars": 1825,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.16666666666666663,
+        "duration_ms": 173370
+      },
+      "elapsed_seconds": 15.89,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 57,
+      "session_id": "58",
+      "prompt": "As a student, you are required to calculate the total size of all files with a specific file extension in a given directory, \"problem_dir,\" and its subdirectories. You have to use Linux (Ubuntu) operating system commands to achieve this. The file extension and directory path will be given to you as input arguments.",
+      "reward": 0.6447,
+      "components": {
+        "token_efficiency": 0.2316,
+        "tool_efficiency": 0.6667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5591,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.9267,
+        "duration_efficiency": 0.064,
+        "llm_judge": 0.9
+      },
+      "metrics": {
+        "input_tokens": 3701,
+        "output_tokens": 378,
+        "total_tokens": 4079,
+        "num_tool_calls": 5,
+        "assistant_turns": 5,
+        "reasoning_chars": 0,
+        "tool_output_chars": 117,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 133800
+      },
+      "elapsed_seconds": 25.93,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 58,
+      "session_id": "60",
+      "prompt": "You are using a Linux operating system (Ubuntu), and your task is to find out the total number of processes that are using a specific user's UID.\n\nIn this exercise, you'll use standard Linux command-line utilities like 'ps', 'grep', and 'wc' to achieve this. Additionally, you will execute an initialization script that simulates an environment with a specific number of processes running as that specific user.\n\nYour answer should be an integer representing the total number of processes running as that user.",
+      "reward": 0.4343,
+      "components": {
+        "token_efficiency": 0.1901,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.398,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.2817,
+        "duration_efficiency": 0.0754,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 6210,
+        "output_tokens": 180,
+        "total_tokens": 6390,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 673,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 115890
+      },
+      "elapsed_seconds": 20.04,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 59,
+      "session_id": "63",
+      "prompt": "Your task is to calculate the total size of all files in a given directory, including files in its subdirectories, and return the total size in bytes. The given directory is `/home/user/experiment` which contains multiple subdirectories and files of different sizes.\n\nNOTE: You should not use any pre-built tools or commands to return the total directory size directly (e.g., `du`). You are required to find the size of each file individually and calculate the total sum. The answer must be an integer.",
+      "reward": 0.6904,
+      "components": {
+        "token_efficiency": 0.3369,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.692,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5057,
+        "duration_efficiency": 0.1287,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1239,
+        "output_tokens": 66,
+        "total_tokens": 1305,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 27,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 59210
+      },
+      "elapsed_seconds": 24.91,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 60,
+      "session_id": "61",
+      "prompt": "You are given a Linux file system with two directories named \"dir1\" and \"dir2\". Both directories contain a set of text files. Your task is to write a bash script to count the total number of lines in all the text files that reside in both \"dir1\" and \"dir2\". Please only consider the files with '.txt' extension.",
+      "reward": 0.5063,
+      "components": {
+        "token_efficiency": 0.1813,
+        "tool_efficiency": 0.5333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4799,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.8658,
+        "duration_efficiency": 0.0274,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 6425,
+        "output_tokens": 609,
+        "total_tokens": 7034,
+        "num_tool_calls": 7,
+        "assistant_turns": 7,
+        "reasoning_chars": 0,
+        "tool_output_chars": 277,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 212310
+      },
+      "elapsed_seconds": 5.05,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 61,
+      "session_id": "65",
+      "prompt": "'In this experiment, you will be asked to find the number of lines for each type of file in a directory specified during the initialization step. The directory you should operate in is \"experiment\". You are required to find the count of lines for the following types of files: .txt, .csv, and .log. Your answer should be in the format of `TXT_COUNT CSV_COUNT LOG_COUNT`, separated by spaces.\\n\\nTo make it more challenging, you need to find the line count by only using a single command. You are allowed to use pipes to pass the output of one command to another if needed.\\n\\nMake sure not to count empty lines or lines that only contain whitespaces (spaces or tabs).'",
+      "reward": 0.6613,
+      "components": {
+        "token_efficiency": 0.2884,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.569,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5079,
+        "duration_efficiency": 0.2307,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2093,
+        "output_tokens": 112,
+        "total_tokens": 2205,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 105,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 16350
+      },
+      "elapsed_seconds": 0.58,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 62,
+      "session_id": "59",
+      "prompt": "Design a problem that challenges students to count the number of lines containing the exact word \"error\" in all files with the extension \".log\" in the current directory (excluding subdirectories). Count only lines where \"error\" appears and is not part of another word and is case-insensitive. For example, \"errors\" and \"ERROR\" should not be counted. The output should be an integer. Ensure that you operate in the current working directory where the files are created.",
+      "reward": 0.4772,
+      "components": {
+        "token_efficiency": 0.1463,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4663,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.9367,
+        "duration_efficiency": 0.0074,
+        "llm_judge": 0.2
+      },
+      "metrics": {
+        "input_tokens": 9308,
+        "output_tokens": 962,
+        "total_tokens": 10270,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 321,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 273220
+      },
+      "elapsed_seconds": 0.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 63,
+      "session_id": "64",
+      "prompt": "In this problem, the students should calculate the total number of files and directories (recursive) in a given directory. The directory will be created and populated with files and directories by the initialization script. During the initialization, a specific environment variable `TARGET_DIR` will be set pointing to the created directory, which should be used by the students in their command.\n\nYou need to find the total number of files and directories (recursive) in the directory pointed by `TARGET_DIR`. Use the command line to achieve this and submit your answer as an integer.",
+      "reward": 0.4101,
+      "components": {
+        "token_efficiency": 0.1474,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.2942,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.2582,
+        "duration_efficiency": 0.0598,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 9885,
+        "output_tokens": 262,
+        "total_tokens": 10147,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 2072,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 141080
+      },
+      "elapsed_seconds": 0.48,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 64,
+      "session_id": "62",
+      "prompt": "You are given a task to monitor system usage in a Linux (Ubuntu) operating system. You are required to calculate the percentage of the available memory (in integers) that has been used on the system. To do this, you will first execute an initialization script to deploy the environment on each student's Linux system, and then execute a piece of code to produce an integer as the standard answer. Your task is to devise a problem, bash scripts for initialization, and an example script to calculate the used memory percentage.\n\nPlease keep in mind that the question description must be related to the Linux operating system and the output must only contain integers.",
+      "reward": 0.4747,
+      "components": {
+        "token_efficiency": 0.1404,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3637,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.7249,
+        "duration_efficiency": 0.0145,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 10146,
+        "output_tokens": 793,
+        "total_tokens": 10939,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 976,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 249750
+      },
+      "elapsed_seconds": 1.25,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 65,
+      "session_id": "66",
+      "prompt": "\"In this problem, you are required to count the total number of lines and the total number of words in all '*.txt' files located in your current working directory. The output should be an integer value which calculates the sum of the total number of lines and the total number of words as a single integer. Make sure to consider only '*.txt' files in the current working directory and ignore any files in subdirectories. You should execute this task in the current directory where the init script has created sample files.\"",
+      "reward": 0.6027,
+      "components": {
+        "token_efficiency": 0.2669,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5333,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3306,
+        "duration_efficiency": 0.0917,
+        "llm_judge": 0.9
+      },
+      "metrics": {
+        "input_tokens": 2691,
+        "output_tokens": 92,
+        "total_tokens": 2783,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 155,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 94410
+      },
+      "elapsed_seconds": 47.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 66,
+      "session_id": "67",
+      "prompt": "\"You have been given a task to analyze the file permissions of all the files in a specific directory named 'task_directory'. You need to calculate the sum of the octal file permissions of each file in 'task_directory'. Assume that there are no subdirectories, only regular files in this directory.\\n\\nYour task is as follows:\\n\\n1. Create a directory called 'task_directory'.\\n2. Create several files in 'task_directory' with random file permissions.\\n3. Calculate the sum of the octal file permissions for all the files in 'task_directory'.\"",
+      "reward": 0.4847,
+      "components": {
+        "token_efficiency": 0.1652,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4757,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.7984,
+        "duration_efficiency": 0.0203,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 7699,
+        "output_tokens": 668,
+        "total_tokens": 8367,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 290,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 232280
+      },
+      "elapsed_seconds": 21.41,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 67,
+      "session_id": "68",
+      "prompt": "'In this problem, you are required to determine the total number of files and directories present in a given directory named \"test_directory\", as well as the total size (in kilobytes) of those files and directories within that specified directory. The answer should be a single integer representing the summation of the total number of files, directories, and their total combined size in kilobytes. For example, if there are 10 files and 5 directories, and the total combined size of those files and directories is 500 KB, the output would be 515.'",
+      "reward": 0.4467,
+      "components": {
+        "token_efficiency": 0.1771,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4942,
+        "redundancy_penalty": 0.75,
+        "output_density": 0.6154,
+        "duration_efficiency": 0.0294,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 6908,
+        "output_tokens": 453,
+        "total_tokens": 7361,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 237,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.25,
+        "duration_ms": 206990
+      },
+      "elapsed_seconds": 21.08,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 68,
+      "session_id": "69",
+      "prompt": "You are given a folder named \"log_folder\" in your current working directory containing log files from a server. These log files are named in the format \"log_YYYY-MM-DD.txt\" (for example, \"log_2022-10-01.txt\"). Your task is to find out the number of log files in the \"log_folder\" that were created exactly 30 days or more ago from the current date. Make sure to operate within the \"log_folder\" directory for this task.",
+      "reward": 0.4706,
+      "components": {
+        "token_efficiency": 0.1664,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4409,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.6874,
+        "duration_efficiency": 0.0234,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 7695,
+        "output_tokens": 568,
+        "total_tokens": 8263,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 423,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 223420
+      },
+      "elapsed_seconds": 14.74,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 69,
+      "session_id": "71",
+      "prompt": "'You have been given the responsibility to manage a list of files with specific naming conventions in your Linux operating system. To do this effectively, you need to perform the following tasks:\\n\\n1. Create a directory named \"file_analysis\" in the home directory \"~\".\\n2. Inside the \"file_analysis\" directory, generate 100 text files named \"file-number.txt,\" where the number is replaced with their corresponding index in the range.'",
+      "reward": 0.72,
+      "components": {
+        "token_efficiency": 0.3354,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6826,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.8145,
+        "duration_efficiency": 0.1289,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1218,
+        "output_tokens": 108,
+        "total_tokens": 1326,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 30,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 59070
+      },
+      "elapsed_seconds": 15.19,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 70,
+      "session_id": "70",
+      "prompt": "As a Linux user, you are asked to calculate the total line count of all the \".txt\" files in the 'experiment' directory, including its subdirectories. Note that you should only count the lines in the text files that contain at least one occurrence of a specified keyword. You need to perform the following tasks: 1. Write a Bash script to generate the directory structure with sample \".txt\" files in the 'experiment' directory. 2. Write a Bash script to calculate the total line count as described.",
+      "reward": 0.4954,
+      "components": {
+        "token_efficiency": 0.1609,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4669,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.9296,
+        "duration_efficiency": 0.0102,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 7952,
+        "output_tokens": 815,
+        "total_tokens": 8767,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 319,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 263670
+      },
+      "elapsed_seconds": 17.06,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 71,
+      "session_id": "73",
+      "prompt": "'As a student, you must calculate the total number of bytes used by all the \".txt\" files in the \"problem_directory\" directory. This directory is created and filled with files using an initialization script. To solve this problem, you need to use the Linux command line tools in your Ubuntu operating system. After calculating the total number of bytes, submit your answer as an integer value.'",
+      "reward": 0.6377,
+      "components": {
+        "token_efficiency": 0.2979,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5108,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3719,
+        "duration_efficiency": 0.0986,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1916,
+        "output_tokens": 74,
+        "total_tokens": 1990,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 198,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 86470
+      },
+      "elapsed_seconds": 18.73,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 72,
+      "session_id": "75",
+      "prompt": "'You have been provided with a directory named \"sample_files\" containing text files. These text files represent server logs, with each line representing an entry. Your task is to count the total number of unique IP addresses present across all the log files in the \"sample_files\" directory. Note: The log files follow the format with each line containing a date, time, IP address, and a log message after the IP address.'",
+      "reward": 0.6203,
+      "components": {
+        "token_efficiency": 0.2629,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4816,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3748,
+        "duration_efficiency": 0.1795,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2799,
+        "output_tokens": 109,
+        "total_tokens": 2908,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 272,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 31200
+      },
+      "elapsed_seconds": 9.63,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 73,
+      "session_id": "72",
+      "prompt": "In this task, you need to find the total number of files and directories in a given directory called `experiment_directory`, excluding the directory itself and hidden files or directories (files or directories that start with a dot, `.`). To complete this task, you will be provided with an initialization script that sets up the `experiment_directory`, and your goal is to return an integer value representing the total number of non-hidden files and directories within that directory.",
+      "reward": 0.4439,
+      "components": {
+        "token_efficiency": 0.1789,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4525,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5281,
+        "duration_efficiency": 0.022,
+        "llm_judge": 0.2
+      },
+      "metrics": {
+        "input_tokens": 6834,
+        "output_tokens": 381,
+        "total_tokens": 7215,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 373,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 227200
+      },
+      "elapsed_seconds": 0.61,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 74,
+      "session_id": "77",
+      "prompt": "As a student, you are given a Linux directory named \"student_data\" containing multiple text files which represent various students' data. Each file contains a student's ID number, a space, and their test scores in three subjects (Math, Science, and English) separated by spaces. You need to perform this task within the \"student_data\" directory. The format of the content inside the file is as follows:  \n  \n```  \nID_Number Math_Score Science_Score English_Score  \n```  \n  \nPlease provide the sum of the average scores of each subject rounded down to the nearest integer for all students in the \"student_data\" directory.",
+      "reward": 0.6204,
+      "components": {
+        "token_efficiency": 0.2574,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5076,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4211,
+        "duration_efficiency": 0.0644,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2957,
+        "output_tokens": 130,
+        "total_tokens": 3087,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 205,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 133190
+      },
+      "elapsed_seconds": 0.47,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 75,
+      "session_id": "76",
+      "prompt": "You are given a directory named \"logs\" containing multiple log files. Each file represents logs generated per day. The filename format is \"log_YYYY-MM-DD.txt\". Your task is to count the occurrences of the word \"error\" (case insensitive) in the log files and sum the errors in all log files.\n\nTo complete this task, perform the following steps:\n\n1. Create a directory named \"logs\".\n2. Create log files for the past 7 days inside the \"logs\" directory. The content of each log file should have random \"error\"/\"Error\" entries along with other content.\n3. Use Linux command(s) to calculate the total count of \"error\" (case insensitive) occurrences in all the log files inside the \"logs\" directory.\n\nYour final answer should be the total count of \"error\" occurrences as an integer.",
+      "reward": 0.6546,
+      "components": {
+        "token_efficiency": 0.2156,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3808,
+        "redundancy_penalty": 1.0,
+        "output_density": 1.0,
+        "duration_efficiency": 0.0524,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 4320,
+        "output_tokens": 531,
+        "total_tokens": 4851,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 811,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 155020
+      },
+      "elapsed_seconds": 0.55,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 76,
+      "session_id": "79",
+      "prompt": "You are given a directory called \"reports\". Inside the directory \"reports\", there are many text files, each containing one line with an integer value. You need to calculate the sum of all integer values from all these text files, and output the result as an integer.\n\nIn summary, your task is to:\n\n1. Enter the \"reports\" directory.\n2. Read all the text files inside the \"reports\" directory.\n3. Calculate the sum of integer values inside each text file.\n4. Output the final sum as an integer.",
+      "reward": 0.6187,
+      "components": {
+        "token_efficiency": 0.2654,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5221,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3285,
+        "duration_efficiency": 0.1469,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2738,
+        "output_tokens": 93,
+        "total_tokens": 2831,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 175,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 47050
+      },
+      "elapsed_seconds": 0.65,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 77,
+      "session_id": "78",
+      "prompt": "In this problem, you are asked to calculate the total size (in kilobytes) of all regular files in a given directory in your Ubuntu operating system. The directory will be named 'test_directory' and will be located in the home folder. The directory will contain multiple regular files and subdirectories. You only have to calculate the size of regular files in the \"test_directory\" and ignore the files inside subdirectories.\n\nTo summarize, you must perform the following tasks:\n\n1. Navigate to the 'test_directory' located in your home folder.\n2. Calculate the total size (in kilobytes) of all regular files in the 'test_directory' (ignoring the files inside subdirectories).",
+      "reward": 0.4883,
+      "components": {
+        "token_efficiency": 0.2084,
+        "tool_efficiency": 0.6,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4422,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3623,
+        "duration_efficiency": 0.115,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 5054,
+        "output_tokens": 190,
+        "total_tokens": 5244,
+        "num_tool_calls": 6,
+        "assistant_turns": 6,
+        "reasoning_chars": 0,
+        "tool_output_chars": 417,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 70390
+      },
+      "elapsed_seconds": 6.2,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 78,
+      "session_id": "82",
+      "prompt": "As a student, you are tasked to retrieve the number of lines of code in Python files within a specific directory and all its subdirectories. The directory, named `question_directory`, has been provided to you by the initialization script and contains numerous Python files with the extension `.py`. Your task is to find the total number of lines of code across all the Python files contained in the `question_directory` and all its subdirectories. Note: Ignore any empty lines. Only count lines with actual code.",
+      "reward": 0.653,
+      "components": {
+        "token_efficiency": 0.2984,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6047,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4293,
+        "duration_efficiency": 0.1,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1895,
+        "output_tokens": 85,
+        "total_tokens": 1980,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 71,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 85010
+      },
+      "elapsed_seconds": 44.75,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 79,
+      "session_id": "80",
+      "prompt": "'You are given a directory named \\'logs\\' in your Linux operating system, which contains multiple log files for various days. Each log file has a specific naming format such as \"YYYY-MM-DD.log\". Your task is to count the total number of log files for a particular month provided to you in the format \\'YYYY-MM\\' and return the count as an integer.\\n\\nEnsure you are operating within the \"logs\" directory when conducting your search.\\n\\nFollow these steps:\\n\\n1. In your Linux (ubuntu) operating system, run the initialization bash script to create the \"logs\" directory with sample log files.\\n2. Write a bash script that takes the \\'YYYY-MM\\' as input, counts the total number of log files for that particular month within the \"logs\" directory, and returns the count as an integer.'",
+      "reward": 0.558,
+      "components": {
+        "token_efficiency": 0.1806,
+        "tool_efficiency": 0.5333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5232,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.7358,
+        "duration_efficiency": 0.0389,
+        "llm_judge": 0.7
+      },
+      "metrics": {
+        "input_tokens": 6560,
+        "output_tokens": 521,
+        "total_tokens": 7081,
+        "num_tool_calls": 7,
+        "assistant_turns": 7,
+        "reasoning_chars": 0,
+        "tool_output_chars": 173,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 183670
+      },
+      "elapsed_seconds": 28.46,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 80,
+      "session_id": "83",
+      "prompt": "\"This problem is designed to test your ability to navigate and manipulate files and directories using Linux command line tools on an Ubuntu operating system.\\n\\nThere is an initialization bash script that will set up the required environment and files in the 'target_directory'. Your task is to determine the total number of occurrences of the word 'linux' (case insensitive) across all '.txt' files within this directory.\\n\\nYou need to perform the following steps:\\n\\n1. Execute the initialization bash script to create the 'target_directory' and set up the required environment.\\n2. Navigate to the 'target_directory'.\\n3. Execute a command that will help you count the total occurrences of the word 'linux' (case insensitive) in all the '.txt' files inside the 'target_directory'.\\n4. The output of the command should be a single integer - the total number of occurrences of the word 'linux'.\"",
+      "reward": 0.6137,
+      "components": {
+        "token_efficiency": 0.2578,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.546,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.2996,
+        "duration_efficiency": 0.0937,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2979,
+        "output_tokens": 92,
+        "total_tokens": 3071,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 135,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 92030
+      },
+      "elapsed_seconds": 20.47,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 81,
+      "session_id": "84",
+      "prompt": "'You are given a directory named `example_files` located at the root level containing text files with random alphabetic strings and integers in each line. Your task is to navigate to this directory and calculate the total sum of integers in all the files within the `example_files` directory. Note that you should only consider lines that contain integers exclusively and discard any numbers that contain both integers and alphabetic characters. \\n\\nFor example, if a file contains:\\n\\n```\\nabc\\n3\\n4hj\\n5\\n```\\n\\nOnly consider `3` and `5` as valid integers. The sum for this file would be `8`.'",
+      "reward": 0.6258,
+      "components": {
+        "token_efficiency": 0.2611,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5315,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4251,
+        "duration_efficiency": 0.0966,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2838,
+        "output_tokens": 126,
+        "total_tokens": 2964,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 158,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 88740
+      },
+      "elapsed_seconds": 15.67,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 82,
+      "session_id": "85",
+      "prompt": "As a student, you are given a task to determine the number of directories, subdirectories, and files in the 'problem_directory' directory. You need to write a shell script that will return the exact number of directories, subdirectories, and files, excluding the parent directory and the current directory. The final answer should be a single integer (the sum of all directories, subdirectories, and files).\n\nTo ensure that everyone is working with the same directory structure, an initialization script has been provided. Execute this script to create the necessary directory structure and files for the problem.\n\nNote: The problem should be solved using the Linux operating system.",
+      "reward": 0.6479,
+      "components": {
+        "token_efficiency": 0.296,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.606,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3396,
+        "duration_efficiency": 0.1867,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1963,
+        "output_tokens": 69,
+        "total_tokens": 2032,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 70,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 28490
+      },
+      "elapsed_seconds": 18.53,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 83,
+      "session_id": "86",
+      "prompt": "'As a student, you are required to find the total number of lines containing the word \"Linux\" in all text files (*.txt) within a specific directory named \"linux_problem\" and its subdirectories. You are given the path to the directory as an input. Your answer should only contain an integer, representing the total number of lines containing the word \"Linux\".'",
+      "reward": 0.6401,
+      "components": {
+        "token_efficiency": 0.2545,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4296,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.6912,
+        "duration_efficiency": 0.0877,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2963,
+        "output_tokens": 220,
+        "total_tokens": 3183,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 478,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 99230
+      },
+      "elapsed_seconds": 19.8,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 84,
+      "session_id": "88",
+      "prompt": "You've been given a server's log file named `server.log` containing timestamps of user login activities throughout the day in 24-hour format (e.g. \"23:40\"). Your task is to find the total number of logins that happened during the peak hours of 9:00 PM to 11:59 PM. \n\nCreate a script to count the number of logins during that time frame. The result should be printed, and contain only the integer representing the total number of logins during the peak hours.",
+      "reward": 0.4963,
+      "components": {
+        "token_efficiency": 0.2148,
+        "tool_efficiency": 0.6,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.451,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4414,
+        "duration_efficiency": 0.0677,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 4678,
+        "output_tokens": 216,
+        "total_tokens": 4894,
+        "num_tool_calls": 6,
+        "assistant_turns": 6,
+        "reasoning_chars": 0,
+        "tool_output_chars": 379,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 127770
+      },
+      "elapsed_seconds": 12.85,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 85,
+      "session_id": "81",
+      "prompt": "The objective of this problem is to make you familiar with the Linux file system and various commands to interact with it. As a student, you need to count the number of files and directories inside a given directory and calculate the sum of their sizes in bytes using shell commands. The output should be the sum of the sizes (in bytes) of all files and directories inside the given directory 'test_directory'.\n\nThe task consists of the following steps:\n\n1. Create a directory called 'test_directory'.\n2. Inside 'test_directory', create 'n' subdirectories, where 'n' is a random number between 3 and 7.\n3. Inside each subdirectory, create 'm' files, where 'm' is a random number between 4 and 10. Each file should contain random alphanumeric strings.\n4. Calculate the sum of the sizes of all files and directories inside 'test_directory' using shell commands.",
+      "reward": 0.5352,
+      "components": {
+        "token_efficiency": 0.1321,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4034,
+        "redundancy_penalty": 0.875,
+        "output_density": 1.0,
+        "duration_efficiency": -0.0124,
+        "llm_judge": 0.7
+      },
+      "metrics": {
+        "input_tokens": 10768,
+        "output_tokens": 1203,
+        "total_tokens": 11971,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 635,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.125,
+        "duration_ms": 350840
+      },
+      "elapsed_seconds": 11.16,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 86,
+      "session_id": "89",
+      "prompt": "As a student, you are requested to find the total number of files and directories inside a specific directory, including its subdirectories. The output should be an integer representing the total count without any extra information. The given directory will be named \"project_directory\".",
+      "reward": 0.6193,
+      "components": {
+        "token_efficiency": 0.3075,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6296,
+        "redundancy_penalty": 0.6667,
+        "output_density": 0.379,
+        "duration_efficiency": 0.097,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1726,
+        "output_tokens": 68,
+        "total_tokens": 1794,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 54,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.33333333333333337,
+        "duration_ms": 88280
+      },
+      "elapsed_seconds": 0.52,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 87,
+      "session_id": "90",
+      "prompt": "In this problem, you need to find the number of non-empty lines in a log file named `system_logs.txt`, which contains records of various system activities. You will first initialize the log file with random content, ensuring that some empty lines are included. Then, you will write a program in the Linux (Ubuntu) operating system to count the number of non-empty lines in the log file. This task should be performed in the current working directory where the `system_logs.txt` file is generated. The result should be printed as an integer.",
+      "reward": 0.6677,
+      "components": {
+        "token_efficiency": 0.292,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6348,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5467,
+        "duration_efficiency": 0.1318,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2006,
+        "output_tokens": 116,
+        "total_tokens": 2122,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 51,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 56940
+      },
+      "elapsed_seconds": 0.44,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 88,
+      "session_id": "91",
+      "prompt": "As a student, you are given a directory located at ~/student_directory that contains several subdirectories. Each subdirectory contains a few text files. Your task is to find the total number of lines in all text files (.txt) combined, and submit it as the answer. It is crucial to ensure you only count the lines from text files (.txt) in the specified directory and subdirectories, and ignore other file types. Use the built-in Linux commands to achieve this.",
+      "reward": 0.6603,
+      "components": {
+        "token_efficiency": 0.3342,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4901,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3649,
+        "duration_efficiency": 0.2254,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1294,
+        "output_tokens": 49,
+        "total_tokens": 1343,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 248,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 17480
+      },
+      "elapsed_seconds": 0.47,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 89,
+      "session_id": "87",
+      "prompt": "As a student, your task is to find out how many hidden directories are in your home directory and the current working directory, which is initially set to a visible subdirectory in your home directory. Note that a hidden directory starts with a dot ('.').",
+      "reward": 0.4707,
+      "components": {
+        "token_efficiency": 0.1738,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4982,
+        "redundancy_penalty": 0.75,
+        "output_density": 0.8555,
+        "duration_efficiency": 0.0371,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 6969,
+        "output_tokens": 652,
+        "total_tokens": 7621,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 227,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.25,
+        "duration_ms": 187950
+      },
+      "elapsed_seconds": 40.14,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 90,
+      "session_id": "93",
+      "prompt": "As a student, you are tasked with determining the number of directories and subdirectories in a given directory tree, specifically in the `/var/log` directory on an Ubuntu Linux operating system. Your task must be performed entirely through the command line using provided Linux tools.\n\nYou are required to write a shell script that will count the number of directories, both direct and nested, in the `/var/log` directory and output the total number in the form of an integer.",
+      "reward": 0.6909,
+      "components": {
+        "token_efficiency": 0.3415,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3626,
+        "duration_efficiency": 0.3953,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1196,
+        "output_tokens": 45,
+        "total_tokens": 1241,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 2050
+      },
+      "elapsed_seconds": 25.7,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 91,
+      "session_id": "92",
+      "prompt": "\"You are given a folder named 'files' in your current working directory containing several text files. You have to navigate to the 'files' folder and find the total sum of all the integers present across all the text files. Integers can be positive or negative and may be more than one per line. The integers are separated by whitespace or special characters. \"",
+      "reward": 0.628,
+      "components": {
+        "token_efficiency": 0.2646,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4741,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.417,
+        "duration_efficiency": 0.2554,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2735,
+        "output_tokens": 119,
+        "total_tokens": 2854,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 295,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 11970
+      },
+      "elapsed_seconds": 29.17,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 92,
+      "session_id": "95",
+      "prompt": "'As a student, you are asked to find the total number of lines of code in all the \".c\" and \".h\" files in the \"test_directory\" (including its subdirectories). The question will test your ability to navigate the Linux file system, use basic commands to filter and manipulate the data. To complete the task, you should provide the total number of lines of code in the \"test_directory\" folder containing \".c\" and \".h\" files.'",
+      "reward": 0.6659,
+      "components": {
+        "token_efficiency": 0.3339,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5023,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4451,
+        "duration_efficiency": 0.1536,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1288,
+        "output_tokens": 60,
+        "total_tokens": 1348,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 217,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 43220
+      },
+      "elapsed_seconds": 23.14,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 93,
+      "session_id": "96",
+      "prompt": "\"A company stores their employee information in the form of text files in a folder called 'employees'. Each employee has a file named {employee_id}.txt, and each file contains numbered tasks assigned to the respective employee. The tasks are labeled as either 'urgent' or 'normal', and the label is followed by a colon and a positive integer denoting the time it takes to complete the task (in minutes).\\n\\nYour task is to operate within the 'employees' folder and find the total amount of time, in minutes, needed to complete all urgent tasks assigned to all employees. The folder 'employees' contains the following six files: 101.txt, 102.txt, 103.txt, 104.txt, 105.txt, and 106.txt. The final result should be a single integer, which is the sum of urgent task times.\\n\\nExample of task list in an employee's file:\\n```\\nurgent:30\\nnormal:10\\nurgent:20\\nnormal:15\\n```\"",
+      "reward": 0.5998,
+      "components": {
+        "token_efficiency": 0.2426,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4394,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3037,
+        "duration_efficiency": 0.097,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 3512,
+        "output_tokens": 110,
+        "total_tokens": 3622,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 430,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 88270
+      },
+      "elapsed_seconds": 24.67,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 94,
+      "session_id": "98",
+      "prompt": "As a student, you need to determine the total occupied storage space by all the `.txt` files in a given directory to understand how much storage the text files are consuming. You will be given a directory named \"files_directory\" with several files of various extensions. Your task is to calculate the total size in kilobytes (KB) of all `.txt` files in the \"files_directory\" directory and return the result as an integer.",
+      "reward": 0.6414,
+      "components": {
+        "token_efficiency": 0.2971,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5315,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3787,
+        "duration_efficiency": 0.1224,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1931,
+        "output_tokens": 76,
+        "total_tokens": 2007,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 158,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 64110
+      },
+      "elapsed_seconds": 22.52,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 95,
+      "session_id": "100",
+      "prompt": "As a student, you have been given the task of finding the total number of lines, within a specified set of text files, that contain a specific word. You will write a script using Linux (Ubuntu) shell commands to achieve this task. The specific word and the text files will be provided through an initialization script.",
+      "reward": 0.6282,
+      "components": {
+        "token_efficiency": 0.2734,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5473,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3892,
+        "duration_efficiency": 0.1231,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2494,
+        "output_tokens": 101,
+        "total_tokens": 2595,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 133,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 63520
+      },
+      "elapsed_seconds": 14.33,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 96,
+      "session_id": "99",
+      "prompt": "\"You need to calculate the number of files and directories in the current user's home directory (excluding hidden files and directories) and multiply that by the number of non-empty text files (*.txt) within the current user's home directory. Operate in the 'test' directory located in the user's home directory after executing the init script.\\n\\nNote: You can assume that there are only ASCII characters in text files (*.txt).\\n\\nTo solve the problem, follow these steps:\\n\\n1. Calculate the number of (non-hidden) files and directories in the specified 'test' directory.\\n2. Calculate the non-empty text files (*.txt) only in the 'test' directory.\\n3. Multiply the result of step 1 with step 2.\\n4. Output the final result.\"",
+      "reward": 0.4501,
+      "components": {
+        "token_efficiency": 0.1811,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.431,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.2739,
+        "duration_efficiency": 0.0865,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 6853,
+        "output_tokens": 193,
+        "total_tokens": 7046,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 471,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 100760
+      },
+      "elapsed_seconds": 3.79,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 97,
+      "session_id": "101",
+      "prompt": "As a student, you are requested to find out the total number of lines containing a specific word in all the \".txt\" files within a given directory. You will be given the word \"Linux\" and a directory named \"files-dir\" containing some \".txt\" files with random content. The output should be a single integer representing the total count of lines containing the word \"Linux\" in all the \".txt\" files.",
+      "reward": 0.6493,
+      "components": {
+        "token_efficiency": 0.2999,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.569,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3696,
+        "duration_efficiency": 0.2092,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1876,
+        "output_tokens": 72,
+        "total_tokens": 1948,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 105,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 21450
+      },
+      "elapsed_seconds": 0.44,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 98,
+      "session_id": "97",
+      "prompt": "As a student, you are required to find the total number of regular files and directories inside a given folder (including sub-directories). The folder will be located in the home directory, named \"exp_folder\". You should write a bash script to count the number of regular files and directories separately and then output the sum of them.",
+      "reward": 0.4955,
+      "components": {
+        "token_efficiency": 0.1615,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4591,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.9377,
+        "duration_efficiency": 0.0097,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 7896,
+        "output_tokens": 817,
+        "total_tokens": 8713,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 347,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 265310
+      },
+      "elapsed_seconds": 0.47,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 99,
+      "session_id": "103",
+      "prompt": "You are required to solve the following problem related to the Linux operating system. You need to calculate the total size (in bytes) of all the files with extension \".txt\" inside the \"example\" directory and its subdirectories. The \"example\" directory is provided as the base directory for this task, and it will contain multiple subdirectories. The answer should be an integer representing the sum of the sizes of all .txt files.",
+      "reward": 0.6279,
+      "components": {
+        "token_efficiency": 0.2841,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.435,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3853,
+        "duration_efficiency": 0.0968,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2221,
+        "output_tokens": 89,
+        "total_tokens": 2310,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 451,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 88520
+      },
+      "elapsed_seconds": 0.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 100,
+      "session_id": "94",
+      "prompt": "As a Linux system administrator, you need to monitor the disk usage of the `/home` directory because it is very important to ensure that the system runs smoothly. You have to determine the total number of files with the `.log` extension that are larger than 500 KB in size within the `/home` directory and its subdirectories, including any test directories such as `/home/testdir1`, `/home/testdir2`, and `/home/testdir3`. To solve this problem, you need to do the following: 1. Execute an initialization bash script to create the required environment for the problem in each student's Linux (Ubuntu) operating system. 2. Write a script that will output a single integer - the total number of `.log` files larger than 500 KB in the `/home` directory, its subdirectories, and the test directories.",
+      "reward": 0.4737,
+      "components": {
+        "token_efficiency": 0.1395,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4578,
+        "redundancy_penalty": 0.75,
+        "output_density": 0.8786,
+        "duration_efficiency": 0.0032,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 10081,
+        "output_tokens": 971,
+        "total_tokens": 11052,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 352,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.25,
+        "duration_ms": 288030
+      },
+      "elapsed_seconds": 2.04,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 101,
+      "session_id": "102",
+      "prompt": "The objective of this problem is to calculate the total number of occurrences of a specific word in the text files inside a given directory. You will need to navigate through the Linux operating system, use shell commands and produce a single integer as output. Ensure you navigate to the correct directory as specified below. Here is the detailed question description: 1. You are given a directory named \"assignment\" located in your home directory (`~/assignment/`). 2. Inside the \"assignment\" directory, there are multiple files - both text files (with `.txt` extension) and non-text files. 3. Your task is to find the total number of occurrences of the word \"Linux\" (case insensitive) in all the text files within this directory.",
+      "reward": 0.6175,
+      "components": {
+        "token_efficiency": 0.2606,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5363,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3458,
+        "duration_efficiency": 0.0821,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2876,
+        "output_tokens": 103,
+        "total_tokens": 2979,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 150,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 106550
+      },
+      "elapsed_seconds": 37.37,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 102,
+      "session_id": "107",
+      "prompt": "\"As a student, you are required to find the total amount of the specific file types in a given directory named 'problem_folder' and its subdirectories. You need to calculate the sum of the total file sizes (in bytes) for each of the following file extensions: '.txt', '.jpg', and '.png'. You'll be using the Linux operating system to accomplish these tasks.\\n\\nFor this, you'll perform the following steps:\\n\\n1. Traverse all the files in the 'problem_folder' directory and its subdirectories.\\n2. Calculate the total file sizes (in bytes) for each of the mentioned three file types.\\n3. Your output should be an integer, which is the sum of the total bytes for the files with '.txt', '.jpg', and '.png' extensions.\"",
+      "reward": 0.6941,
+      "components": {
+        "token_efficiency": 0.3261,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.692,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.559,
+        "duration_efficiency": 0.1488,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1385,
+        "output_tokens": 82,
+        "total_tokens": 1467,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 27,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 45920
+      },
+      "elapsed_seconds": 15.66,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 103,
+      "session_id": "108",
+      "prompt": "As a student, you are asked to create a directory structure under your home directory and determine the total number of created directories as your answer. The created directory structure is outlined as follows:\n\n1. Create a main directory named \"StudentFiles\" in your home directory.\n2. Inside \"StudentFiles,\" create three sub-directories named \"ClassA\", \"ClassB\", and \"ClassC\".\n3. In each of the sub-directories, create three more sub-directories named \"Project1\", \"Project2\", and \"Project3\".\n\nSubmit your answer as the total number of directories created, including the main directory.",
+      "reward": 0.6674,
+      "components": {
+        "token_efficiency": 0.291,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6247,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5175,
+        "duration_efficiency": 0.2086,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2034,
+        "output_tokens": 111,
+        "total_tokens": 2145,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 57,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 21610
+      },
+      "elapsed_seconds": 18.33,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 104,
+      "session_id": "109",
+      "prompt": "As a student, you are given a directory named `log_files` containing log files from multiple servers. The log files are named as \"server1.log\", \"server2.log\", etc. Each log file contains a list of errors observed on that server.\n\nThe error messages have a specific format: a timestamp followed by an error code and error message, separated by colons. For example:\n\n```\n2022-02-28T10:30:23Z:ERR0001:Permission denied.\n2022-02-28T10:31:42Z:ERR0003:Failed to connect to the database.\n```\n\nYour task is to calculate the total number of errors with the error code 'ERR0003' found in all log files present in the `log_files` directory. \n\nThe answer must be an integer representing the total count of the 'ERR0003' error code in all log files.",
+      "reward": 0.6361,
+      "components": {
+        "token_efficiency": 0.2834,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5862,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3179,
+        "duration_efficiency": 0.0962,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2254,
+        "output_tokens": 74,
+        "total_tokens": 2328,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 87,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 89130
+      },
+      "elapsed_seconds": 16.78,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 105,
+      "session_id": "106",
+      "prompt": "'As a student, you are given a directory named \"test_directory\" that contains multiple subdirectories. Each subdirectory contains a variable number of files. You are asked to find out the total number of files in all these subdirectories contained in \"test_directory\". To make it more interesting, you need to accomplish this by utilizing Linux commands in a shell script.'",
+      "reward": 0.438,
+      "components": {
+        "token_efficiency": 0.1794,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3852,
+        "redundancy_penalty": 0.875,
+        "output_density": 0.649,
+        "duration_efficiency": 0.0437,
+        "llm_judge": 0.2
+      },
+      "metrics": {
+        "input_tokens": 6714,
+        "output_tokens": 466,
+        "total_tokens": 7180,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 773,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.125,
+        "duration_ms": 172820
+      },
+      "elapsed_seconds": 21.21,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 106,
+      "session_id": "110",
+      "prompt": "As a student, you are given a directory located at `/tmp/experiment/` containing multiple subdirectories. Each subdirectory contains an unknown number of text files. Your task is to find out the total number of lines across all the text files in all the subdirectories. To achieve this, you will have to write a Linux command that will output this total number of lines.",
+      "reward": 0.6931,
+      "components": {
+        "token_efficiency": 0.3418,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5093,
+        "duration_efficiency": 0.1425,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1174,
+        "output_tokens": 63,
+        "total_tokens": 1237,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 49740
+      },
+      "elapsed_seconds": 27.74,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 107,
+      "session_id": "104",
+      "prompt": "'As a student, you are to find the total number of lines containing the word \"Linux\" in all \".txt\" files located within the \"experiment\" directory and its subdirectories. Create this directory with some \".txt\" files, ensuring that some of the files contain the word \"Linux\". Your final output should be an integer representing the total number of lines containing the word \"Linux\" in all these .txt files.'",
+      "reward": 0.4846,
+      "components": {
+        "token_efficiency": 0.161,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4568,
+        "redundancy_penalty": 0.875,
+        "output_density": 0.9534,
+        "duration_efficiency": 0.017,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 7923,
+        "output_tokens": 835,
+        "total_tokens": 8758,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 356,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.125,
+        "duration_ms": 242150
+      },
+      "elapsed_seconds": 21.66,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 108,
+      "session_id": "111",
+      "prompt": "As a student learning Linux operating systems, you are tasked to create a simple directory structure with given rules and then count the total number of directories created. \n\nUsing the command line in your Ubuntu operating system, follow these steps:\n\n1. Create a parent directory named 'parentDir'.\n2. Inside 'parentDir', create 3 directories named 'level1_A', 'level1_B', and 'level1_C'.\n3. Inside each of the level 1 directories, create 2 subdirectories named 'level2_1' and 'level2_2'.\n4. Once the directory structure is created, find and submit the total count of directories created (including the parent directory).",
+      "reward": 0.6701,
+      "components": {
+        "token_efficiency": 0.2856,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6247,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.6022,
+        "duration_efficiency": 0.1198,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2138,
+        "output_tokens": 137,
+        "total_tokens": 2275,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 57,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 66180
+      },
+      "elapsed_seconds": 10.61,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 109,
+      "session_id": "113",
+      "prompt": "'As an expert in the Linux operating system, you have been given a directory named \"student_directory\" with multiple subdirectories and files of various types and sizes. Your task is to calculate the total size of all files within the \"student_directory\" and its subdirectories that have a \".txt\" extension. The answer should be in bytes. You must submit a single integer value as the answer.\\n\\nYou will be provided with a test environment. The following items should be noted:\\n\\n1. The subdirectories do not have a specific depth and may contain more nested subdirectories.\\n2. Some file and directory names might have spaces.\\n3. You should consider only regular files (not symbolic links, devices, or other special files).'",
+      "reward": 0.6921,
+      "components": {
+        "token_efficiency": 0.3301,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6888,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4769,
+        "duration_efficiency": 0.2599,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1338,
+        "output_tokens": 67,
+        "total_tokens": 1405,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 28,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 11320
+      },
+      "elapsed_seconds": 0.6,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 110,
+      "session_id": "105",
+      "prompt": "In this problem, you will write a bash script that reads a text file containing a list of file names, one name per line. The text file will be placed in a newly created directory named \"files_list.\" The script should fetch the total number of lines containing a specified file extension (e.g., \".txt\"). You may assume that file names are alphanumeric, and the file extension will have a period followed by 3 lowercase letters. You should ensure that your script operates within the \"files_list\" directory to successfully complete the tasks pointed out in the problem.",
+      "reward": 0.4838,
+      "components": {
+        "token_efficiency": 0.1479,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3696,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.7916,
+        "duration_efficiency": 0.0152,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 9295,
+        "output_tokens": 799,
+        "total_tokens": 10094,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 916,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 247600
+      },
+      "elapsed_seconds": 0.6,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 111,
+      "session_id": "116",
+      "prompt": "As a Linux user, you are required to find the total number of lines that contain a specific word or string across multiple files in a given directory (excluding subdirectories). You will operate within the \"problem_directory\" and use the word \"linux\" to search within the files. Your answer should be provided as an integer count of the number of lines containing the target word.",
+      "reward": 0.6039,
+      "components": {
+        "token_efficiency": 0.2724,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5791,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4348,
+        "duration_efficiency": 0.0874,
+        "llm_judge": 0.8
+      },
+      "metrics": {
+        "input_tokens": 2508,
+        "output_tokens": 114,
+        "total_tokens": 2622,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 94,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 99620
+      },
+      "elapsed_seconds": 0.47,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 112,
+      "session_id": "114",
+      "prompt": "As a student, you need to find out the total number of unique file types (based on their extensions) in a given directory called `problem_directory` and its subdirectories in your Linux (Ubuntu) operating system. The answer should be an integer representing the total count of unique file types. Please note: 1. Only consider files with extensions and ignore files without extensions. 2. File extensions are case-insensitive (e.g., .txt and .TXT are the same type). 3. Do not include directories in the count.",
+      "reward": 0.5311,
+      "components": {
+        "token_efficiency": 0.2031,
+        "tool_efficiency": 0.6,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5407,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.7399,
+        "duration_efficiency": 0.0451,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 5144,
+        "output_tokens": 411,
+        "total_tokens": 5555,
+        "num_tool_calls": 6,
+        "assistant_turns": 6,
+        "reasoning_chars": 0,
+        "tool_output_chars": 143,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 169800
+      },
+      "elapsed_seconds": 7.55,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 113,
+      "session_id": "115",
+      "prompt": "You are given a Linux (Ubuntu) operating system. Your task is to find the total number of subdirectories present in the `/usr` directory and its immediate child directories (i.e., up to one level deep). The output should be a single integer representing this count.",
+      "reward": 0.3404,
+      "components": {
+        "token_efficiency": 0.1959,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4994,
+        "redundancy_penalty": 0.125,
+        "output_density": 0.4197,
+        "duration_efficiency": 0.0404,
+        "llm_judge": 0.1
+      },
+      "metrics": {
+        "input_tokens": 5752,
+        "output_tokens": 252,
+        "total_tokens": 6004,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 224,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.875,
+        "duration_ms": 180200
+      },
+      "elapsed_seconds": 38.77,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 114,
+      "session_id": "112",
+      "prompt": "\"As a Linux student, you are tasked to count the total number of characters, words, lines, and folders in a specific directory named 'test_directory'. The directory will contain various subdirectories, and you are required to go through every subdirectory to count all the text files' characters, words, lines, and total folders.\\n\\nYou need to use shell commands to get the results efficiently. You are required to provide a single integer, which represents the computed total as follows:\\n\\nTotal = characters + words + lines + folders\\n\\nKeep in mind that you only need to count text files (files with the .txt extension).\"",
+      "reward": 0.4574,
+      "components": {
+        "token_efficiency": 0.1529,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4103,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.6173,
+        "duration_efficiency": 0.0291,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 8968,
+        "output_tokens": 590,
+        "total_tokens": 9558,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 589,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 207900
+      },
+      "elapsed_seconds": 18.74,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 115,
+      "session_id": "118",
+      "prompt": "As a student, your task is to find the total number of non-empty directories inside the '/etc' directory. Your goal is to return that number as an integer.\n\nPlease follow these steps to find the answer:\n\n1. List all items in the '/etc' directory.\n2. Identify each item as a file or directory.\n3. Discard any files and focus only on the directories.\n4. Make sure to exclude empty directories from your count.\n5. Count the remaining non-empty directories, and return the sum as an integer.",
+      "reward": 0.6653,
+      "components": {
+        "token_efficiency": 0.2951,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6296,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4678,
+        "duration_efficiency": 0.2363,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1956,
+        "output_tokens": 96,
+        "total_tokens": 2052,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 54,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 15240
+      },
+      "elapsed_seconds": 17.4,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 116,
+      "session_id": "120",
+      "prompt": "As a student, you are required to calculate the total number of lines in all the '.txt' files in the '~/txt_problem' directory and its sub-directories. You need to ensure you only count '.txt' files and ignore any other file types or directories. Once you have the answer, submit your result as an integer.",
+      "reward": 0.6632,
+      "components": {
+        "token_efficiency": 0.3393,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5112,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3931,
+        "duration_efficiency": 0.1587,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1222,
+        "output_tokens": 50,
+        "total_tokens": 1272,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 197,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 40520
+      },
+      "elapsed_seconds": 14.23,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 117,
+      "session_id": "122",
+      "prompt": "As a student, your goal is to find the total number of occurrences of a given word within a set of text files in different directories. You are provided with a directory named \"problem_directory\" containing multiple text files, as well as subdirectories containing text files. The word to be searched is \"Linux\". Your answer should be the total number of occurrences of the word \"Linux\" across all the text files in the entire directory structure (including subdirectories). Make sure you only count exact matches and that the word is treated as case-sensitive.",
+      "reward": 0.6861,
+      "components": {
+        "token_efficiency": 0.3372,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4535,
+        "duration_efficiency": 0.1384,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1242,
+        "output_tokens": 59,
+        "total_tokens": 1301,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 52340
+      },
+      "elapsed_seconds": 16.17,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 118,
+      "session_id": "117",
+      "prompt": "'You are given a directory named \"files\" within your current working directory, which contains a variable number of text files. Each text file contains a single line of comma-separated integers. Your task is to compute the sum of all integers in each file, and then find the highest sum among all the files in the directory.\\n\\nFirst, execute an initialization bash script to deploy the environment required for the problem. After executing the script, you will find a directory named \"files\" directly under your current working directory containing multiple text files.\\n\\nYour job is to interact with the shell to calculate the sum of integers in each file inside the \"files\" directory and find the highest sum. When you think you have an answer, submit the highest sum as an integer.'",
+      "reward": 0.4681,
+      "components": {
+        "token_efficiency": 0.1653,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4923,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.6139,
+        "duration_efficiency": 0.0231,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 7843,
+        "output_tokens": 513,
+        "total_tokens": 8356,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 242,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 224100
+      },
+      "elapsed_seconds": 15.41,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 119,
+      "session_id": "123",
+      "prompt": "As a Linux (Ubuntu) user, your task is to create a script that counts the total storage used by all regular files within the \"/var/log\" directory, in kilobytes. Your output should be an integer representing the total storage used by all these files in kilobytes.",
+      "reward": 0.6938,
+      "components": {
+        "token_efficiency": 0.3449,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6888,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5263,
+        "duration_efficiency": 0.122,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1134,
+        "output_tokens": 63,
+        "total_tokens": 1197,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 28,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 64400
+      },
+      "elapsed_seconds": 19.19,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 120,
+      "session_id": "119",
+      "prompt": "As a Linux system administrator, you are tasked with demonstrating your ability to iterate through directories and calculate the total number of files of a specific type.\n\nAssuming you are given a specific file extension (e.g., \".txt\"), count the total number of files with that extension under the \"/home/user/documents\" directory and all its subdirectories. Note that the \"/home/user/documents\" directory could be arbitrarily nested with subdirectories containing no limit to the number of files or other directories.\n\nThe output should be a single integer (the total count of files with the given extension).",
+      "reward": 0.3913,
+      "components": {
+        "token_efficiency": 0.1751,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.468,
+        "redundancy_penalty": 0.5,
+        "output_density": 0.4826,
+        "duration_efficiency": 0.0492,
+        "llm_judge": 0.2
+      },
+      "metrics": {
+        "input_tokens": 7158,
+        "output_tokens": 363,
+        "total_tokens": 7521,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 315,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.5,
+        "duration_ms": 161300
+      },
+      "elapsed_seconds": 15.87,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 121,
+      "session_id": "126",
+      "prompt": "As a Linux system administrator, you are required to find out the total number of files within the 'main_directory' including all its subdirectories. The directory structure will be provided in the initialization bash script. You need to write a bash script that counts the total number of files in 'main_directory' and returns the answer as an integer.",
+      "reward": 0.6848,
+      "components": {
+        "token_efficiency": 0.3455,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3701,
+        "duration_efficiency": 0.238,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1145,
+        "output_tokens": 44,
+        "total_tokens": 1189,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 14910
+      },
+      "elapsed_seconds": 0.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 122,
+      "session_id": "124",
+      "prompt": "As a Linux student, you are tasked with calculating the total size of all `.txt` files within the `test_directory` and its subdirectories. The answer should be in kilobytes (KB) and rounded down to the nearest integer value. Assume that all directories and files have read permissions.",
+      "reward": 0.6736,
+      "components": {
+        "token_efficiency": 0.3015,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6296,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5643,
+        "duration_efficiency": 0.1767,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1806,
+        "output_tokens": 108,
+        "total_tokens": 1914,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 54,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 32299
+      },
+      "elapsed_seconds": 0.45,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 123,
+      "session_id": "121",
+      "prompt": "\"As a student, you will explore and analyze the Linux (Ubuntu) operating system's file system. Your goal is to write a bash script that counts the number of files and directories in the directory '~/linux_problem/sample_dir', ignoring hidden files and directories. After counting, return the sum of file and directory counts as an integer.\"",
+      "reward": 0.4516,
+      "components": {
+        "token_efficiency": 0.1826,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3959,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4919,
+        "duration_efficiency": 0.0433,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 6591,
+        "output_tokens": 341,
+        "total_tokens": 6932,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 689,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 173800
+      },
+      "elapsed_seconds": 0.67,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 124,
+      "session_id": "129",
+      "prompt": "'In this task, you are required to calculate the total number of lines of code (LOC) written in Python (.py) files in a given directory named \"codebase\" and its subdirectories. The directory will be created and populated through the initialization script and will contain several Python files and subdirectories with Python files. Note that the directory and file structure may change with each new experiment. Your task is to interact with the Linux shell and find the total LOC in all Python files within the \"codebase\" directory and its subdirectories.'",
+      "reward": 0.671,
+      "components": {
+        "token_efficiency": 0.3355,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5237,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3472,
+        "duration_efficiency": 0.4009,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1279,
+        "output_tokens": 46,
+        "total_tokens": 1325,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 172,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 1910
+      },
+      "elapsed_seconds": 0.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 125,
+      "session_id": "127",
+      "prompt": "'As a student, you are tasked to calculate the total size of files with a specific extension in a given directory and its subdirectories. You need to find the sum of these file sizes in bytes. The files extension and the directory path will be provided to you as input. You will specifically be working in the `/tmp/my-task/test-dir` directory. Note: You should only consider regular files, not symbolic links.'",
+      "reward": 0.6218,
+      "components": {
+        "token_efficiency": 0.2548,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4442,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4661,
+        "duration_efficiency": 0.1411,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 3027,
+        "output_tokens": 148,
+        "total_tokens": 3175,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 408,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 50620
+      },
+      "elapsed_seconds": 5.31,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 126,
+      "session_id": "130",
+      "prompt": "As a student, your task is to determine the total number of files and directories under the `/etc` directory in your Linux operating system (Ubuntu). Your answer should be a single integer, representing the sum of the total number of files and directories.\n\nNote: Do *not* include the `/etc` directory itself in your count. Only count the files and directories directly under the `/etc` directory.",
+      "reward": 0.6775,
+      "components": {
+        "token_efficiency": 0.3438,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.692,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3551,
+        "duration_efficiency": 0.1376,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1168,
+        "output_tokens": 43,
+        "total_tokens": 1211,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 27,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 52900
+      },
+      "elapsed_seconds": 41.41,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 127,
+      "session_id": "131",
+      "prompt": "As a student, you are asked to create a simple system analytics tool that will demonstrate your knowledge of the Linux operating system. You are to find the sum of the total number of processes and the number of logged-in users on the system. The answer must be an integer.\n\nTo help you achieve this, you can start by identifying the number of processes currently running on the system, and then find the number of users currently logged into the system. Following that, add the two numbers to get the final result.",
+      "reward": 0.6102,
+      "components": {
+        "token_efficiency": 0.2708,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5962,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3296,
+        "duration_efficiency": 0.0986,
+        "llm_judge": 0.9
+      },
+      "metrics": {
+        "input_tokens": 2582,
+        "output_tokens": 88,
+        "total_tokens": 2670,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 78,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 86540
+      },
+      "elapsed_seconds": 29.66,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 128,
+      "session_id": "125",
+      "prompt": "'In this problem, you are required to find the total number of files and directories in a given directory (`~/testDir`) and its subdirectories. The given directory will be initialized by the provided script and will contain a mixture of files and directories (including hidden files and directories). Your task is to write a bash script that prints the total count of all files and directories present inside `~/testDir`, including its subdirectories.'",
+      "reward": 0.4448,
+      "components": {
+        "token_efficiency": 0.1772,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4812,
+        "redundancy_penalty": 0.875,
+        "output_density": 0.623,
+        "duration_efficiency": 0.0509,
+        "llm_judge": 0.2
+      },
+      "metrics": {
+        "input_tokens": 6894,
+        "output_tokens": 458,
+        "total_tokens": 7352,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 273,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.125,
+        "duration_ms": 157870
+      },
+      "elapsed_seconds": 23.45,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 129,
+      "session_id": "134",
+      "prompt": "'As a student using the Linux operating system (Ubuntu), your task is to count the total number of files and directories in the given directory tree ~/example_directory (including the root directory). The given directory contains a mix of files and directories, including hidden ones (those starting with a period, .).\\n\\nYour challenge is to create and execute a bash script that will calculate the total file count and then output that count as a single integer. You should ignore symbolic links, sockets, and other file types in your count.'",
+      "reward": 0.6842,
+      "components": {
+        "token_efficiency": 0.3385,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.692,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4131,
+        "duration_efficiency": 0.1814,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1230,
+        "output_tokens": 53,
+        "total_tokens": 1283,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 27,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 30450
+      },
+      "elapsed_seconds": 16.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 130,
+      "session_id": "135",
+      "prompt": "As a student, you have been given a directory called \"logs\" containing multiple files. Each file contains lines representing status messages and logged events. You need to analyze these log files and answer the following question:\n\nHow many times the keyword \"ERROR\" appears across all the files in the \"logs\" directory?\n\nIn order to accomplish this task, you must create a single command line solution that processes the log files and returns the total count of occurrences of the keyword \"ERROR\" in the \"logs\" directory. Remember, the output must only contain a single integer representing the count of occurrences.",
+      "reward": 0.6559,
+      "components": {
+        "token_efficiency": 0.2968,
+        "tool_efficiency": 0.8,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5985,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3327,
+        "duration_efficiency": 0.372,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1947,
+        "output_tokens": 67,
+        "total_tokens": 2014,
+        "num_tool_calls": 3,
+        "assistant_turns": 3,
+        "reasoning_chars": 0,
+        "tool_output_chars": 76,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 2750
+      },
+      "elapsed_seconds": 18.8,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 131,
+      "session_id": "128",
+      "prompt": "\"As a student, you are required to calculate the total size of all regular files within a specific directory, 'sample_directory', in bytes. The directory will be created by the initialization script and it will contain several files and subdirectories; however, you should only consider regular files present in the main directory, and ignore files inside subdirectories. Create a bash script to calculate the sum of sizes of the regular files in the given directory, 'sample_directory'. The script should output a single integer representing the total size.\"",
+      "reward": 0.4718,
+      "components": {
+        "token_efficiency": 0.1615,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4138,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.8843,
+        "duration_efficiency": 0.0327,
+        "llm_judge": 0.2
+      },
+      "metrics": {
+        "input_tokens": 7937,
+        "output_tokens": 770,
+        "total_tokens": 8707,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 567,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 198560
+      },
+      "elapsed_seconds": 13.51,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 132,
+      "session_id": "137",
+      "prompt": "As a student, your task is to find the total number of files and directories in the directory '~/TA_problem_directory', excluding its subdirectories. Use the Linux command line to accomplish this task and submit your answer as an integer.",
+      "reward": 0.6827,
+      "components": {
+        "token_efficiency": 0.3485,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3997,
+        "duration_efficiency": 0.1213,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1105,
+        "output_tokens": 46,
+        "total_tokens": 1151,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 64940
+      },
+      "elapsed_seconds": 16.78,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 133,
+      "session_id": "136",
+      "prompt": "In this problem, you need to find the total number of lines containing the word \"Linux\" in all the \".txt\" files inside the \"Linux_files\" directory, located in your home directory, and its subdirectories.",
+      "reward": 0.6468,
+      "components": {
+        "token_efficiency": 0.2739,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5962,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5504,
+        "duration_efficiency": 0.0739,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2438,
+        "output_tokens": 142,
+        "total_tokens": 2580,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 78,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 118190
+      },
+      "elapsed_seconds": 10.24,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 134,
+      "session_id": "133",
+      "prompt": "'For this problem, you need to determine the total number of lines, words, and characters in all text files within a specific directory and its subdirectories in the Linux operating system. You will perform this task using the \\'find\\' and \\'wc\\' commands in the shell.\\n\\nGiven a directory path \"/home/user/project\", determine the total number of:\\n\\n1. Lines (L)\\n2. Words (W)\\n3. Characters (C)\\n\\nin all text files (*.txt) within the given directory and its subdirectories. Your final answer should be in the format: L + W + C. Ensure you consider files nested in various subdirectories of the specified directory.'",
+      "reward": 0.5124,
+      "components": {
+        "token_efficiency": 0.2032,
+        "tool_efficiency": 0.6,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5054,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5859,
+        "duration_efficiency": 0.0502,
+        "llm_judge": 0.4
+      },
+      "metrics": {
+        "input_tokens": 5222,
+        "output_tokens": 325,
+        "total_tokens": 5547,
+        "num_tool_calls": 6,
+        "assistant_turns": 6,
+        "reasoning_chars": 0,
+        "tool_output_chars": 210,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 159330
+      },
+      "elapsed_seconds": 0.48,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 135,
+      "session_id": "138",
+      "prompt": "As a student, you have been assigned a task to analyze the files in a directory and provide useful statistics. Your goal is to determine the total number of lines contained in all the \".txt\" files in the \"/home/student/files\" directory and its subdirectories.\n\nPlease provide your answer in the form of an integer, representing the sum of lines present in all \".txt\" files.",
+      "reward": 0.6936,
+      "components": {
+        "token_efficiency": 0.3408,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6954,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5196,
+        "duration_efficiency": 0.1375,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1186,
+        "output_tokens": 65,
+        "total_tokens": 1251,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 26,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 52940
+      },
+      "elapsed_seconds": 0.42,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 136,
+      "session_id": "132",
+      "prompt": "\"You have just joined a Linux system administration team, and one of the tasks assigned to you is to analyze and store log files generated by various applications in a specific directory. You should do the following:\\n\\n1. Write an initialization script that will create a directory named 'log_files' in the current working directory and will generate 10 log files ('log1.log' to 'log10.log') within this directory. Each log file should contain between 5-10 lines with randomly generated timestamps followed by a log message (e.g., '2022-03-02 15:30:45 Connection established').\\n2. Write a code snippet that, when executed from the directory containing 'log_files', calculates the total number of lines across all log files in the 'log_files' directory. Return this number (an integer) as the final output.\"",
+      "reward": 0.4641,
+      "components": {
+        "token_efficiency": 0.1362,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.3703,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.781,
+        "duration_efficiency": -0.0006,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 10564,
+        "output_tokens": 895,
+        "total_tokens": 11459,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 909,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 302290
+      },
+      "elapsed_seconds": 1.33,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 137,
+      "session_id": "142",
+      "prompt": "As a student, your task is to determine how many lines of code (LOC) are written in the C programming language within the \"code_directory\" directory structure. This directory structure contains multiple subdirectories and files with different programming languages. You need to count the number of lines in all .c files present in the \"code_directory\" directory and its subdirectories; your answer must be an integer. Note: You are only allowed to use the Linux command line and its utilities; you cannot use any other scripts or software to perform this task.",
+      "reward": 0.6713,
+      "components": {
+        "token_efficiency": 0.3357,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5473,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.3631,
+        "duration_efficiency": 0.3269,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1274,
+        "output_tokens": 48,
+        "total_tokens": 1322,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 133,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 4860
+      },
+      "elapsed_seconds": 38.71,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 138,
+      "session_id": "141",
+      "prompt": "As a Linux user, you are required to find the total number of unique characters in a given log file. The file does not have any newline characters. The purpose of this problem is to identify your understanding of file management and text processing using command line.\n\n**Instructions:**\n\n1. In your Linux (Ubuntu) operating system initialize a file called `logfile.txt`.\n\n2. Count and print the number of unique characters in the `logfile.txt` file. The result must be an integer.",
+      "reward": 0.6504,
+      "components": {
+        "token_efficiency": 0.2612,
+        "tool_efficiency": 0.7333,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.5894,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.5874,
+        "duration_efficiency": 0.1477,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 2788,
+        "output_tokens": 174,
+        "total_tokens": 2962,
+        "num_tool_calls": 4,
+        "assistant_turns": 4,
+        "reasoning_chars": 0,
+        "tool_output_chars": 84,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 46580
+      },
+      "elapsed_seconds": 29.18,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 139,
+      "session_id": "143",
+      "prompt": "In this problem, you need to analyze the file system usage (in kilobytes) in a Linux operating system. You will be given the directory called `experiment_folder` in the initialization phase. You need to find out the total number of kilobytes used by all files within that directory (including subdirectories). Your task is to calculate the total file size in kilobytes within the `experiment_folder`, ignoring the sizes of any folders. The answer should be an integer value.",
+      "reward": 0.6931,
+      "components": {
+        "token_efficiency": 0.3395,
+        "tool_efficiency": 0.8667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.6888,
+        "redundancy_penalty": 1.0,
+        "output_density": 0.4728,
+        "duration_efficiency": 0.2412,
+        "llm_judge": 1.0
+      },
+      "metrics": {
+        "input_tokens": 1209,
+        "output_tokens": 60,
+        "total_tokens": 1269,
+        "num_tool_calls": 2,
+        "assistant_turns": 2,
+        "reasoning_chars": 0,
+        "tool_output_chars": 28,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 14320
+      },
+      "elapsed_seconds": 26.25,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 140,
+      "session_id": "140",
+      "prompt": "As a Linux user, you have to analyze the log files to keep track of the activities within a system. In this scenario, you have a log file named \"system_logs.log\" which records specific activities on your Linux (Ubuntu) operating system. The log file contains multiple lines of data with a timestamp, event type (error or_success), user ID, and action message.\n\nHere's an example of a log entry: \n`2022-11-15 18:03:23 error 28 Directory_not_found`\n\nThe user ID is an integer (between 1 and 50), and the number of error events varies.\n\nYour task is to create a script that counts the total number of error events in the log file for a specific user ID, provided as an input argument.\n\nThe output should be a single integer representing the total number of error events.",
+      "reward": 0.6013,
+      "components": {
+        "token_efficiency": 0.1861,
+        "tool_efficiency": 0.6,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.4308,
+        "redundancy_penalty": 1.0,
+        "output_density": 1.0,
+        "duration_efficiency": 0.0333,
+        "llm_judge": 0.8
+      },
+      "metrics": {
+        "input_tokens": 5954,
+        "output_tokens": 721,
+        "total_tokens": 6675,
+        "num_tool_calls": 6,
+        "assistant_turns": 6,
+        "reasoning_chars": 0,
+        "tool_output_chars": 472,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.0,
+        "duration_ms": 197060
+      },
+      "elapsed_seconds": 29.87,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    },
+    {
+      "status": "completed",
+      "dataset_index": 141,
+      "session_id": "139",
+      "prompt": "\"You are given a directory named 'log_files' which contains multiple log files. Each log file is named in the format 'log_server_X_YYYY-MM-DD.txt' where X is an integer server ID (between 1 and 100) and YYYY-MM-DD is the date. The content of each log file contains different integers, one integer per line. Your task is to find the sum of the integers present on the log files located in the 'log_files' directory whose server ID is a prime number and was created within the last 7 days.\\n\\nWrite a bash script to calculate the required sum of integers and output the result.\"",
+      "reward": 0.4476,
+      "components": {
+        "token_efficiency": 0.1326,
+        "tool_efficiency": 0.4667,
+        "reasoning_efficiency": 1.0,
+        "context_efficiency": 0.37,
+        "redundancy_penalty": 0.875,
+        "output_density": 0.7432,
+        "duration_efficiency": 0.0125,
+        "llm_judge": 0.3
+      },
+      "metrics": {
+        "input_tokens": 11023,
+        "output_tokens": 885,
+        "total_tokens": 11908,
+        "num_tool_calls": 8,
+        "assistant_turns": 8,
+        "reasoning_chars": 0,
+        "tool_output_chars": 912,
+        "code_written_chars": 0,
+        "redundancy_ratio": 0.125,
+        "duration_ms": 256370
+      },
+      "elapsed_seconds": 21.23,
+      "judge": {
+        "enabled": true,
+        "model": "google/gemma-4-31B-it",
+        "base_url": "https://morpheus.cit.tum.de/api/v1"
+      }
+    }
+  ]
+}

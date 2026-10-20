@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 105,
+  "session_id": "106",
+  "prompt": "'As a student, you are given a directory named \"test_directory\" that contains multiple subdirectories. Each subdirectory contains a variable number of files. You are asked to find out the total number of files in all these subdirectories contained in \"test_directory\". To make it more interesting, you need to accomplish this by utilizing Linux commands in a shell script.'",
+  "reward": 0.438,
+  "components": {
+    "token_efficiency": 0.1794,
+    "tool_efficiency": 0.4667,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.3852,
+    "redundancy_penalty": 0.875,
+    "output_density": 0.649,
+    "duration_efficiency": 0.0437,
+    "llm_judge": 0.2
+  },
+  "metrics": {
+    "input_tokens": 6714,
+    "output_tokens": 466,
+    "total_tokens": 7180,
+    "num_tool_calls": 8,
+    "assistant_turns": 8,
+    "reasoning_chars": 0,
+    "tool_output_chars": 773,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.125,
+    "duration_ms": 172820
+  },
+  "elapsed_seconds": 21.21,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

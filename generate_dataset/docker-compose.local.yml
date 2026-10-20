@@ -1,0 +1,53 @@
+# generate_dataset/docker-compose.local.yml
+# ==========================================
+# Minimal LOCAL test stack: controller + a single os_interaction worker.
+#
+# This is a trimmed version of extra/docker-compose.yml containing only the
+# pieces needed to smoke-test the os-std task on a laptop (via Colima).
+# The full 5-task + freebase stack lives in extra/docker-compose.yml and is
+# meant for the cluster.
+#
+# Build context is the repo root (one level up from this file), so paths match
+# the worker Dockerfiles which COPY from ./src, ./configs, ./data.
+#
+# Usage (from master_thesis/ root):
+#   DOCKER_BUILDKIT=1 docker compose -f generate_dataset/docker-compose.local.yml up --build
+#
+# Or via the helper:
+#   conda run -n master python -m generate_dataset.serve_local up
+#
+# Ports:
+#   controller  :5020  (both workers AND the assigner client connect here)
+
+name: agentbench-local
+
+services:
+
+  controller:
+    image: jingbh/agentrl-controller:latest
+    container_name: agentrl-controller
+    command: ["controller"]
+    ports:
+      - "5020:5020"          # exposed to host so the assigner client can reach it
+
+  redis:
+    image: redis:7
+    container_name: agentbench-local-redis
+    # worker uses redis for sandbox-container allocation / locking
+
+  os_interaction-std:
+    image: agentbench/os-worker:latest
+    build:
+      context: ..            # repo root (master_thesis/)
+      dockerfile: src/server/tasks/os_interaction/Dockerfile
+    command: ["--controller", "http://controller:5020/api", "os-std"]
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock   # worker spawns sandbox containers
+    environment:
+      # sandbox containers join this docker network
+      - OS_STD_PARAMETERS_ENV_OPTIONS_NETWORK_NAME=agentbench-local_default
+      # point the worker's redis state driver at the compose redis service
+      - OS_STD_PARAMETERS_ENV_OPTIONS_STATE_OPTIONS_CONNECTION_HOST=redis
+    depends_on:
+      - controller
+      - redis

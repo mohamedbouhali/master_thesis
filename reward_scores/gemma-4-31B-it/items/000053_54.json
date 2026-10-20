@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "dataset_index": 53,
+  "session_id": "54",
+  "prompt": "Suppose you have a directory called /data that contains sensitive files that should only be accessible to members of the group \"dataaccess\". Ensure that new files and directories created in this directory inherit the group ownership, and that users can only delete files and directories that they own",
+  "reward": 0.7347,
+  "components": {
+    "token_efficiency": 0.3277,
+    "tool_efficiency": 0.8667,
+    "reasoning_efficiency": 1.0,
+    "context_efficiency": 0.6826,
+    "redundancy_penalty": 1.0,
+    "output_density": 1.0,
+    "duration_efficiency": 0.09,
+    "llm_judge": 1.0
+  },
+  "metrics": {
+    "input_tokens": 1220,
+    "output_tokens": 222,
+    "total_tokens": 1442,
+    "num_tool_calls": 2,
+    "assistant_turns": 2,
+    "reasoning_chars": 0,
+    "tool_output_chars": 30,
+    "code_written_chars": 0,
+    "redundancy_ratio": 0.0,
+    "duration_ms": 96440
+  },
+  "elapsed_seconds": 38.7,
+  "judge": {
+    "enabled": true,
+    "model": "google/gemma-4-31B-it",
+    "base_url": "https://morpheus.cit.tum.de/api/v1"
+  }
+}

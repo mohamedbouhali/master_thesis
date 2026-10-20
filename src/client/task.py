@@ -47,7 +47,16 @@ class TaskClient:
             return 0
         concurrency = 0
         for worker in result[self.name]["workers"].values():
-            if worker["status"] == WorkerStatus.ALIVE:
+            # Newer agentrl-controller reports status as a string ("ALIVE"),
+            # while WorkerStatus is an IntEnum (ALIVE == 0). Accept both so a
+            # version mismatch doesn't silently yield 0 concurrency.
+            status = worker["status"]
+            is_alive = (
+                status == WorkerStatus.ALIVE
+                or status == "ALIVE"
+                or status == WorkerStatus.ALIVE.value
+            )
+            if is_alive and not worker.get("locked", False):
                 concurrency += worker["capacity"] - worker["current"]
         return concurrency
 
