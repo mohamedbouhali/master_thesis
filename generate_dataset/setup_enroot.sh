@@ -5,6 +5,8 @@ set -euo pipefail
 IMG_DIR="${ENROOT_SANDBOX_DIR:-$HOME/enroot_images}"
 DF_DIR="$(cd "$(dirname "$0")/.." && pwd)/data/os_interaction/res/dockerfiles"
 mkdir -p "$IMG_DIR"; cd "$IMG_DIR"
+# Ubuntu image's /etc/rc contains unquoted multi-line labels and breaks; mount a clean one.
+printf '#!/bin/sh\ncd /\nif [ $# -gt 0 ]; then exec "$@"; else exec /bin/bash; fi\n' > rc.sh
 
 [ -f ubuntu_base.sqsh ] || enroot import -o ubuntu_base.sqsh docker://ubuntu
 
@@ -15,7 +17,7 @@ for name in default packages ubuntu; do
   # replay the Dockerfile's RUN lines
   { echo 'echo "APT::Sandbox::User \"root\";" > /etc/apt/apt.conf.d/99sandbox'
     grep '^RUN ' "$DF_DIR/$name" | sed 's/^RUN //'; } > "/tmp/build_$name.sh"
-  enroot start --rw --root --mount "/tmp/build_$name.sh:/build.sh" "build_$name" bash /build.sh
+  enroot start --rw --root --mount "$IMG_DIR/rc.sh:/etc/rc" --mount "/tmp/build_$name.sh:/build.sh" "build_$name" bash /build.sh
   enroot export -o "$name.sqsh" "build_$name"
   enroot remove -f "build_$name"
 done

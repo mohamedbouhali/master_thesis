@@ -20,3 +20,4 @@ analysis
 .env
 reward_score/*
 outputs/*
+Cluster_SSH_Setup.md

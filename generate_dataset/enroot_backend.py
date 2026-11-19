@@ -85,6 +85,9 @@ def load_problems() -> dict[int, dict]:
 
 
 # ── sandbox ───────────────────────────────────────────────────────────────────
+RC = ["--mount", f"{IMG_DIR}/rc.sh:/etc/rc"]  # clean rc (image's own /etc/rc is broken)
+
+
 def _enroot(*args, **kw):
     return subprocess.run(["enroot", *args], capture_output=True, **kw)
 
@@ -101,7 +104,7 @@ class Sandbox:
         if r.returncode:
             raise RuntimeError(f"enroot create failed: {r.stderr.decode()[:300]}")
         self.proc = subprocess.Popen(
-            ["enroot", "start", "--rw", "--root", self.name, "bash"],
+            ["enroot", "start", "--rw", "--root", *RC, self.name, "bash"],
             stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         self.run_shell("cd /root", 30)
 
@@ -126,7 +129,7 @@ class Sandbox:
         lang, code = script
         cmd = ["bash", "-c", code, *(["--", *params] if params else [])] if lang == "bash" \
             else ["python3", "-c", code, *params]
-        r = _enroot("start", "--rw", "--root", self.name, *cmd, timeout=300)
+        r = _enroot("start", "--rw", "--root", *RC, self.name, *cmd, timeout=300)
         return r.returncode, r.stdout.decode("utf-8", "replace")
 
     def close(self):
