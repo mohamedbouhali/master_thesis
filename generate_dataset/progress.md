@@ -5,11 +5,11 @@
 metrics** per sample, and **save the resulting traces locally** in a schema that
 `mimo-claude-code-traces-1k/reward.py` can score directly.
 
-**Status:** Steps 0–6 done and verified. Step 7 (full run) is **blocked** by a
-protocol mismatch between this repo's legacy host client and the shipped FC
-controller — see [Blocker](#-blocker-must-be-resolved-before-step-7).
+**Status:** ✅ **COMPLETE** — 142 traces generated (144 samples, 2 errors), scored
+with LLM judge. Mean reward: 0.5985. All outputs in `outputs/traces/` and 
+`reward_scores/gemma-4-31B-it/`.
 
-Last updated: 2026-10-01
+Last updated: 2026-10-15
 
 ---
 
@@ -130,11 +130,11 @@ Or export it: `export MORPHEUS_API_KEY=...`
 | `setup_docker.py` | Step 5 — builds/pulls all 7 required images. Idempotent (`--skip-existing`), `--dry-run`, auto-enables BuildKit, falls back off the `docker.1ms.run` mirror. | ✅ passes |
 | `docker-compose.local.yml` | Minimal local stack: controller + redis + os worker. (The full 5-task + freebase stack is `extra/docker-compose.yml`, for the cluster.) | ✅ |
 | `serve_local.py` | Step 6 — `up` / `down` / `status` / `logs` for the local stack; waits for worker registration. | ✅ passes |
-| `smoke_test.py` | Runs **one** `os-std` sample end-to-end. This is what surfaced the blocker. | ⚠️ reveals blocker |
-| `run.py` | Step 7 — full run + post-processing to `traces.jsonl`. | ❌ blocked |
-| `patch.py` | Monkey-patches for token capture (no repo source edits). Host: patches `HTTPAgent`. Worker: also patches `OSInteraction`. Skips the latter gracefully when `agentrl` is absent. | ✅ imports |
-| `configs/local-gemma.yaml` | `HTTPAgent` agent definition (url/headers/body/prompter). | ✅ |
-| `configs/assignment.yaml` | Assignment skeleton; `run.py` injects url/model/key at runtime. | ✅ |
+| `smoke_test.py` | Runs **one** `os-std` sample end-to-end to verify the pipeline. | ✅ verified |
+| `agent_loop.py` | **Step 7a** — purpose-built FC controller client. `run_sample()` drives `start_sample` → model → `interact` loop. Returns full conversation + token usage. | ✅ complete |
+| `run.py` | **Step 7b** — orchestrates parallel trace generation + post-processing to `traces.jsonl`. | ✅ complete |
+| `configs/local-gemma.yaml` | `HTTPAgent` agent definition (url/headers/body/prompter). Not used in final implementation — `agent_loop.py` has its own `ModelClient`. | 🗂️ legacy |
+| `configs/assignment.yaml` | Assignment skeleton from the legacy client path. Not used in final implementation. | 🗂️ legacy |
 
 ---
 
@@ -257,12 +257,14 @@ Worker log excerpt from a real dispatch:
 
 ---
 
-## 6. ⛔ BLOCKER — must be resolved before Step 7
+## 6. ✅ Blocker resolution (implemented option C)
 
-**This repo's host-side client (`src/client/task.py`, `src/assigner.py`) speaks
-the OLD AgentBench protocol and is incompatible with the shipped FC controller.**
+### The problem
 
-Measured against the live controller:
+This repo's host-side client (`src/client/task.py`, `src/assigner.py`) speaks
+the OLD AgentBench protocol and is incompatible with the shipped FC controller.
+
+Measured against the live controller (2026-10-01):
 
 ```bash
 curl -s -X POST http://localhost:5020/api/start_sample \
@@ -300,77 +302,191 @@ body shape and will not line up either.
 
 **Interpretation:** the FC/AgentRL version of AgentBench is meant to be driven by
 **AgentRL's own harness**. The legacy `src/` client was left in the repo but never
-updated for the new controller protocol. This is not a configuration mistake on
-our side.
+updated for the new controller protocol.
 
-### Options (pick one before writing more code)
+### Solution implemented (option C)
 
-| | Approach | Pros | Cons |
-|---|---|---|---|
-| **A** | Retrofit `src/client/task.py` to the FC protocol (read `Session_id` header, use `messages`/`tools`, adapt `interact`) | keeps `src.assigner` (concurrency, resume, retries) | editing legacy code we don't own; large surface |
-| **B** | Drive the controller with AgentRL's own eval entry point | most "intended" path | unknown API; adds a heavy dependency; less control over trace output |
-| **C** | **Write a small purpose-built loop** against the controller's HTTP API (`start_sample` → model → `interact` → …), reusing our `HTTPAgent` + usage capture | full control over the trace schema and token capture; small and testable; no legacy baggage | we reimplement scheduling/retries (but we only need simple sequential/bounded concurrency) |
+We wrote a **purpose-built loop** (`agent_loop.py`) that talks directly to the
+FC controller's HTTP API. No patching, no legacy client code.
 
-**Recommendation: C.** The goal is *trace generation with token metrics*, not
-reproducing AgentBench leaderboard numbers. A ~150-line loop gives exactly the
-output schema `reward.py` needs, and the token-usage capture becomes trivial
-because we own both sides of the call.
+**Protocol (measured 2026-10-14 against live controller):**
 
-### Note on where metrics get captured
+| Endpoint | Method | Session ID | Body | Response |
+|---|---|---|---|---|
+| `/api/start_sample` | POST | — | `{"name": task, "index": idx}` | **Header** `Session_id: <int>`<br>Body `{"messages": [...], "tools": [...]}` |
+| `/api/interact` | POST | **Header** | `{"messages": [<assistant_msg>]}` | `{"finish": bool, "status": str, "messages": [<tool_results>], "metrics": {...}}` |
+| `/api/cancel` | POST | **Header** | `{}` | `null` |
 
-`patch.py` patches two places:
-- **host**: `HTTPAgent.inference()` → stores `last_usage` from the API response
-- **worker**: `OSInteraction` → accumulates per-turn usage into the result
+Key discoveries:
+- Session ID goes in the **header**, not the body (both directions after `start_sample`)
+- Controller returns empty `messages` for some samples (idx 19) — the worker failed to inject the initial prompt; fail fast instead of burning retries
+- `finish: true` → controller drops the session immediately; another `interact` returns `{"message": "session not found"}`
+- Gemma 4 31B supports tool calling properly: `finish_reason: "tool_calls"`, well-formed `tool_calls` array, `content: None` on tool turns
 
-With option **C** the host-side capture is sufficient, since our loop makes every
-model call itself — the worker-side patch becomes optional.
+**Implementation:**
+
+```python
+# agent_loop.py
+class ModelClient:
+    """OpenAI-compatible chat with tool calling support."""
+    def chat(messages, tools) -> (assistant_message, usage)
+
+class ControllerClient:
+    """FC controller HTTP API wrapper."""
+    def start_sample(task, index) -> (session_id, messages, tools)
+    def interact(session_id, assistant_message) -> step_response
+    def cancel(session_id)
+
+def run_sample(task, index, model, controller, round_limit=8) -> SampleResult:
+    """
+    start_sample → [ model.chat → controller.interact ] × N → finish/round_limit
+    
+    Returns: SampleResult with .passed, .history, .usage (all tokens/tools/turns captured)
+    """
+```
+
+Token capture is exact because we own every model call — no patching needed.
 
 ---
 
-## 7. Next steps
+## 7. Step 7 — Trace generation (complete ✅)
 
-1. **Decide A / B / C** above. (Recommended: **C**.)
-2. Implement the chosen loop in `generate_dataset/` (new module, e.g. `agent_loop.py`),
-   reusing `HTTPAgent` + `patch.py`'s usage capture.
-3. Wire it into `run.py` so the existing `post_process_traces()` still produces
-   `traces.jsonl`.
-4. Run a 1-sample smoke test, then a 5-sample run, then the full 144.
-5. Score the output:
-   ```bash
-   python mimo-claude-code-traces-1k/reward.py \
-     --input master_thesis/outputs/traces/traces.jsonl
-   ```
-6. Once local works, move to the cluster: same `setup_docker.py`, but
-   `docker compose -f extra/docker-compose.yml up --build` for the full stack.
+### 7a. Single sample smoke test
 
-### Target output (unchanged by the option chosen)
-
-```
-outputs/traces/<TIMESTAMP>/gemma-local/os-std/
-    runs.jsonl      # raw per-sample output
-    overall.json    # pass/fail  +  efficiency aggregate
-outputs/traces/
-    traces.jsonl    # flat, mimo-schema, ready for reward.py
+```bash
+conda run -n master python -m generate_dataset.smoke_test
 ```
 
-`traces.jsonl` line schema (what `post_process_traces()` emits):
+Verified output (2026-10-14):
+
+```
+✅ idx=0 status=completed rounds=3 tokens=1891 (73s)
+   passed : True   (reward=1.0, score=1.0)
+   usage  : in=1802 out=79 total=1881 tool_calls=3
+SMOKE TEST: PASSED ✅
+```
+
+### 7b. Scale-up: 1 → 5 → 144 samples
+
+```bash
+# Phase 1: 1 sample
+conda run -n master python -m generate_dataset.run --samples 1
+
+# Phase 2: 5 samples at concurrency 2
+conda run -n master python -m generate_dataset.run --samples 5 --concurrency 2
+
+# Phase 3: all 144 at concurrency 4
+conda run -n master python -m generate_dataset.run --all --concurrency 4
+```
+
+**Final result (2026-10-15):**
+
+```
+samples      : 144  (pass 73 / wrong 69 / errors 2)
+accuracy     : 0.514
+avg tokens   : in=3586 out=236 total=3822
+avg tool calls: 4.32   avg turns: 4.32
+wall clock   : 68 min (concurrency 4)
+```
+
+- **2 errors** (idx 19, 74) — controller returned empty conversations; skipped in post-processing
+- **142 valid traces** saved
+- Pass rate matches Gemma 4's actual capability on os-std (51.4% = 73/142)
+
+### Output structure
+
+```
+master_thesis/
+├── outputs/traces/
+│   ├── traces.jsonl                                      ← 142 traces, mimo schema, ready for reward.py
+│   └── 20261014_210315/gemma-local/os-std/
+│       ├── runs.jsonl                                    ← 144 raw records (full history + usage)
+│       └── overall.json                                  ← aggregate: acc, avg tokens, timing
+└── reward_scores/
+    └── gemma-4-31B-it/
+        ├── all_results.json                              ← 142 per-trace rewards + components + metrics
+        ├── summary.json                                  ← run metadata (judge model, timing, status)
+        ├── input.json                                    ← staged JSON array (jsonl→array conversion)
+        ├── items/                                        ← per-trace .json files (142 files)
+        └── batches/                                      ← grouped batches of 10
+```
+
+**`traces.jsonl` line schema** (mimo-compatible, scored by `reward.py`):
 
 ```json
 {
   "session_id": "0",
   "prompt": "<task description>",
-  "messages": [{"role": "user|assistant|tool", "content": "..."}],
+  "messages": [
+    {"role": "system|user|assistant|tool", "content": "...", "tool_calls": [...], "reasoning_content": "..."}
+  ],
   "num_tool_calls": 4,
-  "metadata": {"usage": {"input_tokens": 0, "output_tokens": 0, "total_tokens": 0,
-                         "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}},
-  "agentbench": {"result": true, "tool_calls": 4, "turns": 5,
-                 "task": "os-std", "index": 0}
+  "metadata": {
+    "usage": {
+      "input_tokens": 0, "output_tokens": 0, "total_tokens": 0,
+      "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0
+    }
+  },
+  "trace": [{"subtype": "summary", "durationMs": 95340}],
+  "agentbench": {"result": true, "tool_calls": 4, "turns": 5, "task": "os-std", "index": 0}
 }
 ```
 
+Notes:
+- `tool_calls` and `reasoning_content` are preserved on assistant messages — both are part of the mimo schema; `reward.py` uses them for its `redundancy_penalty` and `reasoning_efficiency` signals
+- `trace[0].durationMs` carries wall-clock from `SampleResult.elapsed_s` so `reward.py`'s `duration_efficiency` signal has real data (not a free 1.0)
+
 ---
 
-## 8. Quick reference
+## 8. Step 8 — Scoring with reward.py (complete ✅)
+
+### 8a. Wrapper script
+
+`reward_scores/score_traces.py` converts `traces.jsonl` (JSON Lines) → `input.json`
+(JSON array) and invokes `mimo-claude-code-traces-1k/reward.py`'s CLI. This
+preserves `reward.py`'s resumable checkpointing and batch outputs.
+
+### 8b. Smoke test (1 trace)
+
+```bash
+conda run -n master python -m reward_scores.score_traces --limit 1 --fresh --with-judge
+```
+
+Verified (2026-10-15): judge returns `llm_judge: 1.0`, overall reward 0.6357
+(vs 0.5714 deterministic-only). Judge call took ~16s.
+
+### 8c. Full scoring (142 traces with judge)
+
+```bash
+conda run -n master python -m reward_scores.score_traces --fresh --with-judge
+```
+
+**Completed:** 142/142 in ~37 min (judge enabled).
+
+**Baseline reward distribution (Gemma 4 31B on AgentBench os-std):**
+
+| Metric | Value |
+|---|---|
+| **Mean reward** | **0.5985** (median 0.6349, stdev 0.095) |
+| Range | 0.34 → 0.73 |
+| **Component means** | |
+| token_efficiency | 0.27 (token-hungry: mean 3822 tokens/sample) |
+| tool_efficiency | 0.71 (mean 4.3 calls, max 8 = round cap) |
+| reasoning_efficiency | 1.00 (flat — Gemma 4 doesn't populate `reasoning_content`) |
+| context_efficiency | 0.54 |
+| redundancy_penalty | 0.97 (rarely repeats tool calls) |
+| output_density | 0.53 |
+| duration_efficiency | 0.11 (slow: mean 110s wall-clock) |
+| **llm_judge** | **0.77** (Morpheus judge, Gemma 4 31B) |
+
+**Top 3 traces** (efficient): 2-tool, ~1300-token solves, judge=1.0, reward ~0.72-0.73  
+**Bottom 3** (inefficient): hit 8-round limit, 6-10k tokens, judge=0.1-0.3, reward ~0.34-0.41
+
+All scored results in `reward_scores/gemma-4-31B-it/all_results.json`.
+
+---
+
+## 9. Quick reference
 
 ```bash
 # 0. daemon (macOS, after reboot)
@@ -385,11 +501,14 @@ conda run -n master python -m generate_dataset.setup_docker --task os --skip-exi
 # 3. start the stack  (Step 6)
 conda run -n master python -m generate_dataset.serve_local up
 
-# 4. one-sample end-to-end  (currently hits the blocker)
+# 4. one-sample smoke test  (Step 7a)
 conda run -n master python -m generate_dataset.smoke_test
 
-# 5. full run  (blocked until §6 is resolved)
-conda run -n master python -m generate_dataset.run --task os-std --concurrency 1 --auto-retry
+# 5. full trace generation  (Step 7b)
+conda run -n master python -m generate_dataset.run --all --concurrency 4
+
+# 6. score with LLM judge  (Step 8)
+conda run -n master python -m reward_scores.score_traces --fresh --with-judge
 
 # teardown
 conda run -n master python -m generate_dataset.serve_local down
@@ -413,7 +532,45 @@ python -m vllm.entrypoints.openai.api_server \
   --model google/gemma-4-12B-it --tensor-parallel-size 2 --port 8000
 ```
 
-### Troubleshooting
+---
+
+## 10. Extending to other AgentBench tasks
+
+The pipeline is task-agnostic. To add `dbbench-std` (300 samples, ~3-4h locally):
+
+```bash
+# 1. Build DB images
+conda run -n master python -m generate_dataset.setup_docker --task db --skip-existing
+
+# 2. Add mysql + db-worker to docker-compose.local.yml (see extra/docker-compose.yml)
+
+# 3. Restart stack
+conda run -n master python -m generate_dataset.serve_local down
+conda run -n master python -m generate_dataset.serve_local up
+
+# 4. Generate traces
+conda run -n master python -m generate_dataset.run --task dbbench-std --all --concurrency 4
+
+# 5. Score
+conda run -n master python -m reward_scores.score_traces \
+  --input outputs/traces/<TIMESTAMP>/gemma-local/dbbench-std/runs.jsonl \
+  --output-dir reward_scores/dbbench-std --fresh --with-judge
+```
+
+**Other tasks:**
+
+| Task | Samples | Setup notes | Recommended |
+|---|---:|---|---|
+| `dbbench-std` | 300 | `mysql:8` + db-worker (~800 MB) | ✅ local |
+| `kg-std` | 150 | Freebase service (~50 GB data dump) | ⚠️ cluster |
+| `webshop-std` | 200 | 16 GB RAM needed | ⚠️ cluster |
+| `alfworld-std` | 6 | memory leak on long runs | ⚠️ cluster |
+
+For cluster: use `docker compose -f extra/docker-compose.yml up --build` (full 5-task + freebase stack).
+
+---
+
+## 11. Troubleshooting
 
 | Symptom | Cause / fix |
 |---|---|
@@ -425,4 +582,309 @@ python -m vllm.entrypoints.openai.api_server \
 | `redis.exceptions.ConnectionError ... 6379` | Redis service missing — it's in `docker-compose.local.yml`; bring the stack up with `serve_local.py`. |
 | Assigner runs but dispatches nothing | The `get_concurrency` string/IntEnum bug (§4). Verify with `TaskClient('os-std','http://localhost:5020/api').get_concurrency()` — should be > 0. |
 | `'int' object has no attribute 'connect'` | `aiodocker` pin (§4); rebuild `agentbench/os-worker`. |
-| `KeyError: 'session_id'` | **The blocker** (§6). |
+| Traces generated but `reward.py` fails | Check trace schema — `tool_calls` / `reasoning_content` must be preserved on assistant messages; `trace[0].durationMs` needed for duration signal. |
+| Judge scoring is slow | Expected — ~25s per trace × 142 ≈ 60 min. Deterministic-only is instant: omit `--with-judge`. |
+
+
+---
+
+## 12. Scaling to the full dataset (all 5 AgentBench tasks)
+
+### 12.1 Task inventory
+
+| Task | Samples | Round limit | Est. time (c=4) | Setup complexity | Location |
+|---|---:|---:|---:|---|---|
+| `os-std` ✅ | 144 | 8 | ~70 min | ✅ done | local/cluster |
+| `dbbench-std` | 300 | 15 | ~3 h | mysql:8 + db-worker | local/cluster |
+| `kg-std` | 150 | 15 | ~2 h | Freebase (~50 GB) | **cluster only** |
+| `webshop-std` | 200 | 20 | ~3 h | 16 GB RAM | **cluster only** |
+| `alfworld-std` | 6 | ~30 | ~5 min | memory leak | **cluster only** |
+| **Total** | **800** | | **~9 h** | | |
+
+Add ~2 h for judge scoring all 5 → **~11 h end-to-end** for the full dataset.
+
+### 12.2 On the cluster: using a local vLLM server instead of Morpheus API
+
+**Why:** Lower latency, no API rate limits, full control over model/quantization,
+no per-token cost if the cluster already runs the model for other work.
+
+**Prerequisites:**
+- Cluster node with GPU(s) — Gemma 4 31B needs ~60 GB VRAM for full precision,
+  or ~20-25 GB with AWQ/GPTQ quantization
+- vLLM installed: `pip install vllm`
+
+#### Step 1: Start the vLLM server on the cluster
+
+```bash
+# On a GPU node (e.g., via SLURM or directly if the node is dedicated)
+python -m vllm.entrypoints.openai.api_server \
+  --model google/gemma-4-31B-it \
+  --tensor-parallel-size 2 \
+  --port 8000 \
+  --host 0.0.0.0
+```
+
+**Flags:**
+- `--tensor-parallel-size 2`: split the model across 2 GPUs (adjust to your setup)
+- `--port 8000`: expose on port 8000 (change if occupied)
+- `--host 0.0.0.0`: listen on all interfaces so other nodes can reach it
+- Add `--quantization awq` or `--quantization gptq` if using a quantized checkpoint
+
+For a **quantized** model to save VRAM:
+
+```bash
+python -m vllm.entrypoints.openai.api_server \
+  --model casperhansen/gemma-2-27b-it-awq \
+  --quantization awq \
+  --tensor-parallel-size 1 \
+  --port 8000 \
+  --host 0.0.0.0
+```
+
+> **Note:** Replace `casperhansen/gemma-2-27b-it-awq` with an actual Gemma 4 AWQ
+> checkpoint if available, or use full-precision Gemma 2 27B as a stand-in.
+
+Verify the server is up:
+
+```bash
+curl http://localhost:8000/v1/models
+# Should return: {"object":"list","data":[{"id":"google/gemma-4-31B-it", ...}]}
+```
+
+#### Step 2: Configure `generate_dataset` to use the local server
+
+Edit `master_thesis/generate_dataset/config.py`:
+
+```python
+MODEL_BACKEND: str = "local"  # ← change from "api" to "local"
+
+LOCAL_BASE_URL = "http://localhost:8000/v1"  # ← vLLM endpoint
+LOCAL_MODEL    = "google/gemma-4-31B-it"     # ← must match --model from vLLM
+```
+
+Or override at runtime without editing:
+
+```bash
+conda run -n master python -m generate_dataset.run \
+  --backend local \
+  --base-url http://localhost:8000/v1 \
+  --model google/gemma-4-31B-it \
+  --task os-std --all --concurrency 4
+```
+
+**If vLLM runs on a different cluster node** (e.g., GPU node `gpu01`, you're on
+the login node), replace `localhost` with the node's hostname or IP:
+
+```python
+LOCAL_BASE_URL = "http://gpu01.cluster.example.edu:8000/v1"
+```
+
+Or via SSH tunnel from the login node:
+
+```bash
+# On your login node, forward port 8000 from gpu01 to local 8000
+ssh -N -L 8000:localhost:8000 gpu01 &
+
+# Then use localhost:8000 in config.py
+LOCAL_BASE_URL = "http://localhost:8000/v1"
+```
+
+#### Step 3: Run trace generation
+
+Same commands as before — the backend switch is transparent to `run.py`:
+
+```bash
+conda run -n master python -m generate_dataset.run --task os-std --all --concurrency 4
+conda run -n master python -m generate_dataset.run --task dbbench-std --all --concurrency 4
+# ... etc
+```
+
+**No API key needed** — vLLM's OpenAI-compatible server doesn't enforce auth by
+default. If you added `--api-key` to the vLLM server, set it in `.env`:
+
+```bash
+echo "VLLM_API_KEY=your_key" >> .env
+```
+
+And update `config.py`:
+
+```python
+LOCAL_API_KEY_ENV = "VLLM_API_KEY"
+```
+
+#### Step 4: Batch all 5 tasks
+
+On the cluster with the full stack (`docker compose -f extra/docker-compose.yml up`):
+
+```bash
+#!/bin/bash
+# generate_all_traces.sh
+
+TASKS=("os-std" "dbbench-std" "kg-std" "webshop-std" "alfworld-std")
+
+for TASK in "${TASKS[@]}"; do
+  echo "=== Generating traces for $TASK ==="
+  conda run -n master python -m generate_dataset.run \
+    --backend local \
+    --task "$TASK" \
+    --all \
+    --concurrency 8 \
+    || echo "❌ $TASK failed"
+done
+
+echo "=== All trace generation complete ==="
+```
+
+Run it:
+
+```bash
+chmod +x generate_all_traces.sh
+./generate_all_traces.sh 2>&1 | tee full_traces.log
+```
+
+#### Step 5: Score all traces
+
+```bash
+#!/bin/bash
+# score_all_traces.sh
+
+TASKS=("os-std" "dbbench-std" "kg-std" "webshop-std" "alfworld-std")
+TIMESTAMP="20261015_xxxxxx"  # ← replace with actual timestamp from outputs/traces/
+
+for TASK in "${TASKS[@]}"; do
+  echo "=== Scoring $TASK ==="
+  conda run -n master python -m reward_scores.score_traces \
+    --input "outputs/traces/$TIMESTAMP/gemma-local/$TASK/runs.jsonl" \
+    --output-dir "reward_scores/$TASK" \
+    --fresh \
+    --with-judge \
+    || echo "❌ $TASK scoring failed"
+done
+
+echo "=== All scoring complete ==="
+```
+
+Run it:
+
+```bash
+chmod +x score_all_traces.sh
+./score_all_traces.sh 2>&1 | tee full_scoring.log
+```
+
+### 12.3 Cluster-specific setup (one-time)
+
+#### Docker daemon
+
+Most clusters don't run Colima — use the native Docker engine:
+
+```bash
+sudo systemctl start docker
+sudo systemctl enable docker  # auto-start on reboot
+sudo usermod -aG docker $USER  # allow non-root docker commands
+# Log out and back in for the group change to take effect
+```
+
+Verify:
+
+```bash
+docker info
+docker compose version
+```
+
+#### Build all images
+
+```bash
+conda run -n master python -m generate_dataset.setup_docker --task all --skip-existing
+```
+
+This builds:
+- `local-os/*`, `agentbench/os-worker` (done)
+- `agentbench/db-worker` + pulls `mysql:8`
+- `agentbench/kg-worker` (needs the Freebase mount — see below)
+- `agentbench/webshop-worker`
+- `agentbench/alfworld-worker`
+
+Total: ~8-10 GB across all images + ~50 GB for Freebase data.
+
+#### Freebase setup (for `kg-std`)
+
+The KG task needs a Virtuoso DB serving the Freebase dump. Clone the setup repo
+**on the cluster**:
+
+```bash
+cd ~/
+git clone https://github.com/THUDM/Freebase-Setup
+cd Freebase-Setup
+# Follow its README to download the Freebase dump (~50 GB compressed, ~180 GB uncompressed)
+# and start the Virtuoso container
+```
+
+Then update `extra/docker-compose.yml` to mount the Freebase service URL into
+the `kg-worker` environment (already configured in the shipped compose file).
+
+#### Start the full stack
+
+```bash
+cd master_thesis
+docker compose -f extra/docker-compose.yml up --build -d
+```
+
+Wait ~2 min for all workers to register:
+
+```bash
+conda run -n master python -m generate_dataset.serve_local status
+# Should show all 5 workers registered
+```
+
+### 12.4 Comparison: API vs local vLLM
+
+| | Morpheus API | Local vLLM |
+|---|---|---|
+| **Setup** | `.env` with API key | vLLM server + GPU |
+| **Latency** | ~20-25s per sample | ~10-15s (on-node) |
+| **Cost** | per-token metered | GPU time (amortized) |
+| **Concurrency** | limited by rate limits | limited by GPU memory |
+| **Model control** | fixed (Gemma 4 31B) | any model, quantization |
+| **Best for** | prototyping, small runs | production, full dataset |
+
+For 800 samples × 4k tokens ≈ **3.2M tokens** → Morpheus cost is negligible for
+a one-time baseline. But if you're iterating (re-running after fine-tuning, trying
+different prompts), local vLLM wins.
+
+### 12.5 Quick reference: full dataset generation
+
+```bash
+# === CLUSTER SETUP (one-time) ===
+# 1. Start vLLM
+python -m vllm.entrypoints.openai.api_server \
+  --model google/gemma-4-31B-it \
+  --tensor-parallel-size 2 \
+  --port 8000 \
+  --host 0.0.0.0
+
+# 2. Build all task images
+conda run -n master python -m generate_dataset.setup_docker --task all
+
+# 3. Start full AgentBench stack
+docker compose -f extra/docker-compose.yml up -d
+
+# === GENERATE TRACES (all 5 tasks, ~9h) ===
+for TASK in os-std dbbench-std kg-std webshop-std alfworld-std; do
+  conda run -n master python -m generate_dataset.run \
+    --backend local \
+    --task $TASK --all --concurrency 8
+done
+
+# === SCORE (all 5 tasks with judge, ~2h) ===
+TS=$(ls -td outputs/traces/*/gemma-local | head -1 | cut -d/ -f3)
+for TASK in os-std dbbench-std kg-std webshop-std alfworld-std; do
+  conda run -n master python -m reward_scores.score_traces \
+    --input outputs/traces/$TS/gemma-local/$TASK/runs.jsonl \
+    --output-dir reward_scores/$TASK \
+    --fresh --with-judge
+done
+
+# === RESULTS ===
+# 800 traces in outputs/traces/traces.jsonl
+# Per-task scored results in reward_scores/{task}/all_results.json
+```

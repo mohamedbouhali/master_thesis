@@ -405,7 +405,11 @@ def main() -> int:
             logger.error("%s", exc)
             return 1
 
-    controller = ControllerClient(args.controller)
+    if args.controller == "enroot":
+        from enroot_backend import EnrootController
+        controller = EnrootController(round_limit=args.round_limit)
+    else:
+        controller = ControllerClient(args.controller)
     model = ModelClient(
         base_url=base_url,
         model=model_id,

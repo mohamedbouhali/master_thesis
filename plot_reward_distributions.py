@@ -14,6 +14,7 @@ import numpy as np
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 DEFAULT_INPUT = SCRIPT_DIR / "reward_scores" / "gemma-4-31B-it" / "all_results.json"
+DEFAULT_OUTPUT_DIR = SCRIPT_DIR / "plots"
 COLORS = {
     "blue": "#0072B2",
     "orange": "#E69F00",
@@ -45,8 +46,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=None,
-        help="Directory for PNG files (default: <input directory>/plots)",
+        default=DEFAULT_OUTPUT_DIR,
+        help=f"Directory for PNG files (default: {DEFAULT_OUTPUT_DIR})",
     )
     return parser.parse_args()
 
@@ -457,7 +458,7 @@ def main() -> None:
             "Matplotlib is required to generate plots. Install the pinned project requirements first."
         ) from exc
     input_path = args.input.expanduser().resolve()
-    output = (args.output_dir.expanduser().resolve() if args.output_dir else input_path.parent / "plots")
+    output = args.output_dir.expanduser().resolve()
     rows = load_results(input_path)
     components = discover_fields(rows, "components")
     metrics = discover_fields(rows, "metrics")
