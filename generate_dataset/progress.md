@@ -773,6 +773,14 @@ chmod +x score_all_traces.sh
 
 ### 12.3 Cluster-specific setup (one-time)
 
+> **LRZ update (2026-11-20):** Docker, `sudo` and `docker compose` are NOT available on the
+> LRZ AI cluster. The Docker subsections below apply to machines where you have root.
+> On LRZ, `os-std` runs through the Enroot backend instead
+> (`generate_dataset/enroot_backend.py`, `setup_enroot.sh`, `run.py --controller enroot`).
+> Full steps, findings and status: see `../Cluster_SSH_Setup.md`.
+> Status: sandbox images, isolation and scoring verified; vLLM + a model-driven run still pending.
+> Other tasks (`dbbench`, `kg`, `webshop`, `alfworld`) are not ported yet.
+
 #### Docker daemon
 
 Most clusters don't run Colima — use the native Docker engine:
