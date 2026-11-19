@@ -90,8 +90,12 @@ def load_problems() -> dict[int, dict]:
 RC = ["--mount", f"{IMG_DIR}/rc.sh:/etc/rc"]  # clean rc (image's own /etc/rc is broken)
 
 
+# Never mount the user's real $HOME into the sandbox (LRZ mounts it at /root by default).
+ENV = {**os.environ, "ENROOT_MOUNT_HOME": "no"}
+
+
 def _enroot(*args, **kw):
-    return subprocess.run(["enroot", *args], capture_output=True, **kw)
+    return subprocess.run(["enroot", *args], capture_output=True, env=ENV, **kw)
 
 
 class Sandbox:
@@ -107,7 +111,7 @@ class Sandbox:
             raise RuntimeError(f"enroot create failed: {r.stderr.decode()[:300]}")
         self.proc = subprocess.Popen(
             ["enroot", "start", "--rw", "--root", *RC, self.name, "bash"],
-            stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+            stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, env=ENV)
         self.run_shell("cd /root", 30)
 
     def run_shell(self, cmd: str, timeout: float = 60.0) -> str:

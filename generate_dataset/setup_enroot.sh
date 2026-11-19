@@ -2,6 +2,7 @@
 # Build the 3 os-std sandbox images as Enroot squashfs files (no Docker, no root).
 # Run inside a CPU allocation:  srun -p lrz-cpu --qos=cpu -c 4 --mem=16G -t 01:00:00 --pty bash
 set -euo pipefail
+export ENROOT_MOUNT_HOME=no   # never expose the real $HOME inside build/sandbox containers
 IMG_DIR="${ENROOT_SANDBOX_DIR:-$HOME/enroot_images}"
 DF_DIR="$(cd "$(dirname "$0")/.." && pwd)/data/os_interaction/res/dockerfiles"
 mkdir -p "$IMG_DIR"; cd "$IMG_DIR"
