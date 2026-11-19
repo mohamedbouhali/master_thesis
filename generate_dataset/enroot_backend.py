@@ -69,6 +69,8 @@ def load_problems() -> dict[int, dict]:
                 [json.loads(l) for l in open(f, encoding="utf-8")]
             for it in (raw if isinstance(raw, list) else [raw]):
                 ev, create = it["evaluation"], it.get("create", {})
+                if not isinstance(create, dict):   # original loader ignores non-dict `create`
+                    create = {}
                 root = REPO / item["script_dir"]
                 problems[idx] = {
                     "description": it["description"],
